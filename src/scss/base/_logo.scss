@@ -1,0 +1,15 @@
+.logo {
+    width: 85px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $yellow;
+
+    a {
+        font-family: $secondaryFont;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $black;
+    }
+}

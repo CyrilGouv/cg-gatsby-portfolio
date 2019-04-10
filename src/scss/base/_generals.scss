@@ -1,0 +1,95 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $primaryFont, 'Open Sans', 'Verdana', 'sans-serif';
+    letter-spacing: 2px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $secondaryFont;
+    margin: 0;
+    padding: 0;
+
+    letter-spacing: 5px;
+}
+
+a {
+    display: inline-block;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.bg--black {
+    background-color: $black !important;
+    transition: background-color .55s;
+
+    .hero {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+}
+
+.bg--white {
+    background-color: $lightGray !important;
+    transition: background-color .55s;
+
+    &#portfolio .container {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+}
+
+.txt-yellow {
+    color: $yellow;
+}
+
+.btn {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem 1.125rem 1rem 1.125rem;
+    width: auto;
+    margin-right: auto;
+    
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        right: auto;
+        width: 30%;
+        height: 100%;
+        background-color: $brown;
+        z-index: -1;
+        transition: .55s;
+        border-radius: 1px;
+
+        transform-origin: 100% 100%;
+
+        
+    }
+
+    &:hover {
+        text-decoration: none;
+
+    }
+
+    &:hover::before {
+        width: 100%;
+        right: auto;
+        left: 0;
+    }
+
+}

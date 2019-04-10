@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Butler';
+    src: url('../fonts/Butler/Butler-Medium.woff2') format('woff2'),
+        url('../fonts/Butler/Butler-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler';
+    src: url('../fonts/Butler/Butler-Bold.woff2') format('woff2'),
+        url('../fonts/Butler/Butler-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler Stencil';
+    src: url('../fonts/Butler/ButlerStencil-Medium.woff2') format('woff2'),
+        url('../fonts/Butler/ButlerStencil-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Butler Stencil';
+    src: url('../fonts/Butler/ButlerStencil-Bold.woff2') format('woff2'),
+        url('../fonts/Butler/ButlerStencil-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+$primaryFont: 'Butler';
+$secondaryFont: 'Butler Stencil';
+
+/* COLORS */
+$black: #000;
+$white: #fff;
+
+$gray: #A69E9D;
+$lightGray: #F6F6F7;
+$brown: #A5601C;
+$lightBlack: #474143;
+$yellow: #EFA302;
