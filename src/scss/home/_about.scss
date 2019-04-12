@@ -1,0 +1,71 @@
+.homeAbout {
+    padding: 12rem 0;
+
+    .homeAbout-blurb {
+        margin: 0 15%;
+
+        h4 {
+            font-size: 3.125rem;
+            font-family: $secondaryFont;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: 700;
+            color: $black;
+        }
+
+        p {
+            font-size: 1.375rem;
+            color: $lightBlack;
+            width: 90%;
+        }
+    }
+
+    .homeAbout-img {
+        margin: 5rem auto 0 auto;
+        width: 85%;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: auto;
+
+        .homeAbout-img--proto {
+            position: relative;
+            width: 40%;
+            height: auto;
+            transform: translateY(-200px);
+            z-index: 2;
+            align-self: flex-start;
+
+            &:hover {
+                z-index: 1;
+            }
+        }
+
+        .homeAbout-img--design {
+            height: auto;
+            width: 65%;
+            align-self: flex-end;
+
+            &:hover {
+                z-index: 2;
+            }
+        }
+    }
+
+    .about-transform {
+        margin: 0 15%;
+
+        font-size: 3.125rem;
+        font-weight: 400;
+        color: $black;
+
+        a {
+            color: $black;
+            transition: .35s ease-in;
+
+            &:hover {
+                color: $brown;
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -8,6 +8,10 @@ body {
     letter-spacing: 2px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: $secondaryFont;
     margin: 0;
@@ -92,4 +96,43 @@ a {
         left: 0;
     }
 
+}
+
+.btn--default {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    font-size: 1rem;
+    color: $black;
+    text-transform: uppercase;
+    padding: 1.063rem 1.188rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    width: auto;
+    margin-right: auto;
+    
+    &:before {
+        position: absolute;
+        display: block;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background-color: $brown;
+        z-index: -1;
+        transition: .35s ease-in-out;
+        border-radius: 1px;
+    }
+
+    &:hover::before {
+        width: 100%;
+    }
+
+    img {
+        display: inline-block;
+        width: 16px;
+        height: 6px;
+        margin-left: 1rem;
+    }
 }
