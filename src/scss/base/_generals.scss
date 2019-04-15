@@ -6,6 +6,7 @@ body, html {
 body {
     font-family: $primaryFont, 'Open Sans', 'Verdana', 'sans-serif';
     letter-spacing: 2px;
+    cursor: none;
 }
 
 * {
@@ -22,10 +23,15 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     display: inline-block;
+    cursor: none;
 
     &:hover {
         text-decoration: none;
     }
+}
+
+button {
+    cursor: none !important;
 }
 
 .bg--black {
