@@ -3,7 +3,6 @@ import { Link, graphql, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
 
 import arrowImg from '../../images/base/arrow-black.svg'
-import rocketVideo from '../../video/rocket.mp4'
 
 const About = () => (
     <section className="homeAbout">
@@ -40,7 +39,7 @@ const About = () => (
 
         <div className="about-transform">
             <p>
-                Transformons vos idées en réalité.
+                Transformons vos idées en réalité.<br />
                 <Link to="/contact">Parlons-en maintenant !</Link>
             </p>
         </div>

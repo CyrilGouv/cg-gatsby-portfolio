@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Header from "./Home/header"
+import Footer from "./Base/footer"
 import "../scss/main.scss"
 
 const Layout = ({ children }) => (
@@ -10,11 +11,7 @@ const Layout = ({ children }) => (
     <main>
       {children}
     </main>
-    <footer>
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <Footer />
   </React.Fragment>
 )
 

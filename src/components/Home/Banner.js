@@ -37,11 +37,11 @@ const Banner = () => (
             </nav>
 
             <div className="right-socials">
-                <a href="https://twitter.com/CyrilGouv" target="_blank" rel="nooponer noreferrer">Twitter</a>
+                <a href="https://twitter.com/CyrilGouv" target="_blank" rel="noopener noreferrer">Twitter</a>
                 <span></span>
-                <a href="https://www.instagram.com/cyrilgouv/" target="_blank" rel="nooponer noreferrer">Instagram</a>
+                <a href="https://www.instagram.com/cyrilgouv/" target="_blank" rel="noopener noreferrer">Instagram</a>
                 <span></span>
-                <a href="https://www.linkedin.com/in/cyril-g-030690167/" target="_blank" rel="nooponer noreferrer">Linkedin</a>
+                <a href="https://www.linkedin.com/in/cyril-g-030690167/" target="_blank" rel="noopener noreferrer">Linkedin</a>
             </div>
         </div>
     </div>
