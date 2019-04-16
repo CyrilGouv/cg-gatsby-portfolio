@@ -6,9 +6,9 @@ import Footer from "./Base/Footer"
 import Cursor from '../components/Base/Cursor'
 import "../scss/main.scss"
 
-const Layout = ({ children, mousePosX, mousePosY }) => (
+const Layout = ({ children }) => (
   <React.Fragment>
-    <Cursor handlePosX={ mousePosX } handlePosY={ mousePosY } />
+    <Cursor />
     <Header />
     <main>
       {children}
