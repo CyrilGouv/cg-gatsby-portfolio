@@ -19,7 +19,6 @@ export default class Cursor extends Component {
         return (
             <div className="cursor" style={{ left: this.state.x, top: this.state.y }}>
                 <div className="cursor--bg"></div>
-                { console.log(this.handlePos.mouseX) }
             </div>
         )
     }
