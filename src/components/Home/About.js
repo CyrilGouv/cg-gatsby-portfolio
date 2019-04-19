@@ -2,16 +2,14 @@ import React, { Component } from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
 import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
-import CSSRulePlugin from "gsap/CSSRulePlugin";
-import ScrollMagic from '../Base/ScrollMagic';
-
+import CSSRulePlugin from "gsap/CSSRulePlugin"
+import ScrollMagic from '../Base/ScrollMagic'
 
 
 import arrowImg from '../../images/base/arrow-black.svg'
 
 
 export default class About extends Component {
-
     componentDidMount = () => {
         // Init Scroll Magic
         const controller = new ScrollMagic.Controller()
