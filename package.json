@@ -21,7 +21,8 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
-    "really-smooth-scroll": "^2.1.1"
+    "really-smooth-scroll": "^2.1.1",
+    "scrollmagic": "^2.0.6"
   },
   "devDependencies": {
     "prettier": "^1.16.4"

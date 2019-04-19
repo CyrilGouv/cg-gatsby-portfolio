@@ -11,6 +11,11 @@
             letter-spacing: 5px;
             font-weight: 700;
             color: $black;
+            overflow: hidden;
+
+            span {
+                display: inline-block;
+            }
         }
 
         p {
@@ -35,6 +40,7 @@
             z-index: 2;
             align-self: flex-start;
             margin: 0;
+            overflow: hidden;
 
             &:hover {
                 z-index: 1;
@@ -42,13 +48,25 @@
         }
 
         .homeAbout-img--design {
+            position: relative;
             height: auto;
             width: 65%;
             align-self: flex-end;
+            overflow: hidden;
 
             &:hover {
                 z-index: 2;
             }
+        }
+
+        .reveal-about--mask {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $white;
+            top: -100%;
+            left: 0;
+            transform-origin: 100% 100%;
         }
     }
 
