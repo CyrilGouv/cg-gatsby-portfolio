@@ -5,81 +5,62 @@
  */
 
 // You can delete this file if you're not using it
-const path = require("path");
+const Path = require('path')
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
-  switch (stage) {
-    case 'develop':
-      config.merge({
-        resolve: {
-            alias: {
-                "TweenLite": path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-                "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-                "TimelineLite": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-                "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-                "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-                "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-                "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-            }
-        }
-      });
-
-      break;
-
-    case 'build-css':
-
-      config.merge({
-        resolve: {
-            alias: {
-                "TweenLite": path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-                "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-                "TimelineLite": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-                "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-                "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-                "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-                "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-            }
-        }
-      });
-
-      break;
-
-    case 'build-html':
-
-      config.merge({
-        resolve: {
-            alias: {
-                "TweenLite": path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-                "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-                "TimelineLite": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-                "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-                "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-                "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-                "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-            }
-        }
-      });
-
-      break;
-
-    case 'build-javascript':
-
-      config.merge({
-        resolve: {
-            alias: {
-                "TweenLite": path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
-                "TweenMax": path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
-                "TimelineLite": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
-                "TimelineMax": path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
-                "ScrollMagic": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-                "animation.gsap": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-                "debug.addIndicators": path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
-            }
-        }
-      });
-
-      break;
-  }
-
-  return config;
-};
+exports.onCreateWebpackConfig = ({
+  stage,
+  rules,
+  loaders,
+  plugins,
+  actions,
+}) => {
+  actions.setWebpackConfig({
+    module: {
+      rules:
+        stage === 'build-html'
+          ? [
+              {
+                test: /ScrollMagic/,
+                use: loaders.null(),
+              },
+              {
+                test: /scrollmagic/,
+                use: loaders.null(),
+              },
+            ]
+          : [],
+    },
+    resolve: {
+      alias: {
+        TweenLite: Path.resolve(
+          'node_modules',
+          'gsap/src/uncompressed/TweenLite.js'
+        ),
+        TweenMax: Path.resolve(
+          'node_modules',
+          'gsap/src/uncompressed/TweenMax.js'
+        ),
+        TimelineLite: Path.resolve(
+          'node_modules',
+          'gsap/src/uncompressed/TimelineLite.js'
+        ),
+        TimelineMax: Path.resolve(
+          'node_modules',
+          'gsap/src/uncompressed/TimelineMax.js'
+        ),
+        ScrollMagic: Path.resolve(
+          'node_modules',
+          'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'
+        ),
+        'animation.gsap': Path.resolve(
+          'node_modules',
+          'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'
+        ),
+        'debug.addIndicators': Path.resolve(
+          'node_modules',
+          'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js'
+        ),
+      },
+    },
+  })
+}
