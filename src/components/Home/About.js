@@ -72,8 +72,8 @@ export default class About extends Component {
         })
         .setTween(
             scrollAboutTransformTl
-                .from(aboutTransformPara, 0.85, { transform: 'translateY(100%)', ease: Power4.easeOut })
-                .from('.about-transform a', 0.85, { transform: 'translateY(100%)', ease: Power4.easeOut }, '-=.45')
+                .from(aboutTransformPara, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from('.about-transform a', 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut })
         )
         .addTo(controller)
     }

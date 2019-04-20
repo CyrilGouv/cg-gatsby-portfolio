@@ -7,31 +7,32 @@
         text-align: center;
 
         h5 {
-            position: relative;
-            margin-bottom: 3.125rem;
-    
             font-size: 2.5rem;
             text-transform: uppercase;
             font-family: $secondaryFont;
             font-weight: 400;
+            overflow: hidden;
+
+            .footer-content-start {
+                display: inline-block;
+                
+            }
     
-            span {
+            .footer-content-together {
+                display: inline-block;
+
                 font-size: 3.125rem;
                 font-weight: 700;
             }
-    
-            &::after {
-                position: absolute;
-                content: '';
-                display: block;
-                bottom: -15px;
-                left: 0;
-                right: 0;
-                background-color: $yellow;
-                width: 46px;
-                height: 3px;
-                margin: 0 auto;
-            }
+
+        }
+
+        .footer-content-bar {
+            width: 46px;
+            height: 3px;
+            margin: .85rem auto 2rem auto;
+            background-color: $yellow;
+            transform-origin: 0% 0%;
         }
     
         p {
