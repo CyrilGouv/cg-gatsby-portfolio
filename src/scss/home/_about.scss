@@ -77,7 +77,19 @@
         font-weight: 400;
         color: $black;
 
+        p {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            
+            span {
+                display: inline-block;
+                transform: translateY(0);
+            }
+        }
+
         a {
+            display: inline-block;
             color: $black;
             transition: .35s ease-in;
 

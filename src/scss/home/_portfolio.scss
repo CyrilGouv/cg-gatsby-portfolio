@@ -38,11 +38,22 @@
     }
 
     .projects {
+        position: relative;
         clip-path: inset(0 0);
         transition: all .2s ease-in-out;
 
         &:hover {
             clip-path: inset(21px 17px);
+        }
+
+        .reveal-portfolio--mask {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: $white;
+            top: -100%;
+            left: 0;
+            transform-origin: 100% 100%;
         }
     }
 

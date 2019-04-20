@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
-import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
+import { TimelineLite, Power1, Power2, Power4 } from "gsap/TweenMax";
 import CSSRulePlugin from "gsap/CSSRulePlugin"
 import ScrollMagic from '../Base/ScrollMagic'
 
@@ -17,6 +17,7 @@ export default class About extends Component {
         // Init Timeline
         const scrollAboutTl = new TimelineLite()
         const scrollAboutImgTl = new TimelineLite()
+        const scrollAboutTransformTl = new TimelineLite()
 
         // Vars
         const homeAboutFl = this.refs.homeAboutFl
@@ -25,12 +26,11 @@ export default class About extends Component {
         const homeAboutPara2 = this.refs.homeAboutPara2
         const homeAboutPara3 = this.refs.homeAboutPara3
         const rule = CSSRulePlugin.getRule(".btn--default::before")
-        // const homeAboutImgProto = this.refs.homeAboutImgProto
-        // const homeAboutImgDesign = this.refs.homeAboutImgDesign
+        const aboutTransformPara = this.refs.aboutTransformPara
 
         // Trigger Elements
         const triggerAboutBlurb = this.refs.triggerAboutBlurb
-        // const homeAboutImg = this.refs.homeAboutImg
+        const triggerAboutTransform = this.refs.triggerAboutTransform
         
 
         // About Title Scene
@@ -61,6 +61,19 @@ export default class About extends Component {
         .setTween(
             scrollAboutImgTl
                 .staggerFrom('.reveal-about--mask', .85, { transform: 'translateY(100%)', ease: Power2.easeOut }, 0.35)
+        )
+        .addTo(controller)
+
+        // About Transform Scene
+        const revealAboutTransform = new ScrollMagic.Scene({
+            triggerElement: triggerAboutTransform,
+            triggerHook: 0.85,
+            reverse: false
+        })
+        .setTween(
+            scrollAboutTransformTl
+                .from(aboutTransformPara, 0.85, { transform: 'translateY(100%)', ease: Power4.easeOut })
+                .from('.about-transform a', 0.85, { transform: 'translateY(100%)', ease: Power4.easeOut }, '-=.45')
         )
         .addTo(controller)
     }
@@ -110,9 +123,13 @@ export default class About extends Component {
                     } }
                 />
 
-                <div className="about-transform">
+                <div className="about-transform" ref="triggerAboutTransform">
                     <p>
-                        Transformons vos idées en réalité.<br />
+                        <span ref="aboutTransformPara">
+                            Transformons vos idées en réalité.
+                        </span>
+                    </p>
+                    <p>
                         <Link to="/contact">Parlons-en maintenant !</Link>
                     </p>
                 </div>
