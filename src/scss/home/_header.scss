@@ -107,6 +107,12 @@
             font-family: $secondaryFont;
             font-weight: 400;
             line-height: 1.25;
+
+            overflow: hidden;
+
+            span {
+                display: inline-block;
+            }
         }
 
         h1 {

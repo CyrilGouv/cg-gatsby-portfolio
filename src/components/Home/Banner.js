@@ -23,12 +23,15 @@ export default class Banner extends Component {
 
         const contentTitleBar = this.refs.contentTitleBar
         const h2Title = this.refs.h2Title
+        const h2TitleFirst = this.refs.h2TitleFirst
+        const h2TitleSecond = this.refs.h2TitleSecond
         const h1Title = this.refs.h1Title
         var rule = CSSRulePlugin.getRule(".btn::before")
 
         tl
             .from(contentTitleBar, 1, { transform: "scaleY(0)", delay: 3 })
-            .from(h2Title, .85, { y: "100%", ease: Power1.easeOut })
+            .from(h2TitleFirst, .85, { transform: "translateY(110%)", ease: Power1.easeOut })
+            .from(h2TitleSecond, .85, { transform: "translateY(110%)", ease: Power1.easeOut }, '-=0.70')
             .from(h1Title, 1, { autoAlpha: 0, y: 30, ease: Power1.easeOut })
             .from('.btn', 1, { autoAlpha: 0, y: 30, ease: Power1.easeOut })
             .from('.btn', .5, { paddingLeft: 0, ease: Power1.easeOut })
@@ -57,7 +60,19 @@ export default class Banner extends Component {
                 <div className="content">
                     <div className="contentTitle" ref="contentTitle">
                         <span className="contentTitle-bar" ref="contentTitleBar"></span>
-                        <h2 ref="h2Title">
+                        <div ref="h2Title">
+                            <h2>
+                                <span ref="h2TitleFirst" className="h2--iAm">
+                                    Je suis
+                                </span>
+                            </h2>
+                            <h2>
+                                <span ref="h2TitleSecond" className="txt-yellow">
+                                    Développeur Web
+                                </span>
+                            </h2>
+                        </div>
+                        {/* <h2 ref="h2Title">
                             <span className="h2--iAm">
                                 Je suis
                             </span>
@@ -65,7 +80,7 @@ export default class Banner extends Component {
                             <span className="txt-yellow">
                                 Développeur Web
                             </span>
-                        </h2>
+                        </h2> */}
                     </div>
                     <h1 ref="h1Title">
                         Création de site internet moderne, professionnel et responsive à Biscarrosse dans les Landes.
