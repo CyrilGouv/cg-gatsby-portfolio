@@ -74,16 +74,16 @@ export default class Menu extends Component {
                             <span>01.</span><Link to="/">Accueil.</Link>
                         </li>
                         <li>
-                            <span>02.</span><Link to="/">A propos.</Link>
+                            <span>02.</span><Link to="/a-propos">A propos.</Link>
                         </li>
                         <li>
-                            <span>03.</span><Link to="/">Portfolio.</Link>
+                            <span>03.</span><Link to="/portfolio">Portfolio.</Link>
                         </li>
                         <li>
-                            <span>04.</span><Link to="/">Blog.</Link>
+                            <span>04.</span><Link to="/blog">Blog.</Link>
                         </li>
                         <li>
-                            <span>05.</span><Link to="/">Contact.</Link>
+                            <span>05.</span><Link to="/contact">Contact.</Link>
                         </li>
                     </ul>
                 </nav>

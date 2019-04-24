@@ -72,15 +72,6 @@ export default class Banner extends Component {
                                 </span>
                             </h2>
                         </div>
-                        {/* <h2 ref="h2Title">
-                            <span className="h2--iAm">
-                                Je suis
-                            </span>
-                            <br />
-                            <span className="txt-yellow">
-                                Développeur Web
-                            </span>
-                        </h2> */}
                     </div>
                     <h1 ref="h1Title">
                         Création de site internet moderne, professionnel et responsive à Biscarrosse dans les Landes.
