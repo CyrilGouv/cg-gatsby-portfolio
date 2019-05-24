@@ -1,0 +1,268 @@
+.aboutContent {
+    .who {
+        display: grid;
+        grid-template-columns: 15% 1fr 15%;
+        width: 100%;
+
+        .who-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .who-content-img {
+                width: 45%;
+
+                figure {
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    overflow: hidden;
+
+                    .reveal-profile--mask {
+                        position: absolute;
+                        z-index: 2;
+                        top: -100%;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $white;
+                    }
+                }
+            }
+
+            .who-content-desc {
+                width: 50%;
+
+                h2 {
+                    font-size: 1.375rem;
+                    font-weight: 700;
+                    margin-bottom: 1.75rem;
+                    overflow: hidden;
+
+                    span {
+                        display: inline-block;
+                    }
+                }
+
+                p {
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    color: $lightBlack;
+
+                    strong {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        .who-socials {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            
+            .who-socials-right {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: 50%;
+                left: 50%;
+                transform: translate3d(-50%, -50%, 0) rotate(90deg);
+
+                span {
+                    width: 44px;
+                    height: 1px;
+                    background-color: $black;
+                    margin: 0 1rem;
+                }
+    
+                a {
+                    font-size: 1rem;
+                    color: $black;
+                    font-weight: 400;
+                    letter-spacing: 2px;
+                    text-decoration: none;
+                    transition: .35s;
+    
+                    &:hover {
+                        color: $brown;
+                    }
+                }
+            }
+        }
+    }
+
+    .what {
+        margin-bottom: 12.5rem;
+
+        .what-blurb {
+            margin: 12.5rem 15% 5rem 15%;
+        }
+
+        h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 1.75rem;
+
+            overflow: hidden;
+
+                span {
+                    display: inline-block;
+                }
+        }
+
+        p {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $lightBlack;
+
+            a {
+                color: $lightBlack;
+            }
+        }
+
+        .what-img-content {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 15%;
+
+            .what-img--left {
+                position: relative;
+                overflow: hidden;
+                width: 45%;
+                height: 700px !important;
+                margin: 0;
+
+                .gatsby-image-wrapper {
+                    height: 100%;
+                }
+
+                .reveal-img--mask {
+                    position: absolute;
+                    z-index: 2;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $white;
+                }
+            }
+
+            .what-img--right {
+                width: 50%;
+
+                figure {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0;
+
+                    .reveal-img--mask {
+                        position: absolute;
+                        z-index: 2;
+                        top: -100%;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $white;
+                    }
+                }
+
+                .what-img--wp {
+                    height: 400px;
+
+                    margin-bottom: 8rem;
+                }
+
+                .what-img--digital {
+                    width: 70%;
+                    height: 500px
+                }
+            }
+        }
+    }
+
+    .love {
+        margin: 0 15%;
+
+        h2 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            margin-bottom: 1.75rem;
+
+            overflow: hidden;
+
+            span {
+                display: inline-block;
+            }
+        }
+
+        p {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: $lightBlack;
+
+            a {
+                color: $lightBlack;
+            }
+        }
+
+        .love-img-content {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5rem;
+            margin-bottom: 12rem;
+            
+            figure {
+                position: relative;
+                margin: 0;
+                overflow: hidden;
+
+                .reveal-love--mask {
+                    position: absolute;
+                    z-index: 2;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $white;
+                }
+            }
+
+            .love-img--left {
+                width: 40%;
+                height: 350px;
+                align-self: flex-start;
+
+                &:hover {
+                    z-index: 2;
+                }
+            }
+
+            .love-img--center {
+                width: 40%;
+                height: 350px;
+                align-self: center;
+                margin-top: -12rem;
+
+                &:hover {
+                    z-index: 2;
+                }
+            }
+
+            .love-img--right {
+                width: 40%;
+                height: 350px;
+                align-self: flex-end;
+                margin-top: -12rem;
+
+                &:hover {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
