@@ -62,11 +62,6 @@ export default class Menu extends Component {
             <div className="menu" ref="menu">
                 <div className="left">
                     <Logo />
-                    <div className="left-adj">
-                        <span>Passionné</span>
-                        <span className="left-adj--rect"></span>
-                        <span>Créatif</span>
-                    </div>
                 </div>
                 <nav className="menu-links">
                     <ul ref="menuLinksUl">
@@ -80,10 +75,7 @@ export default class Menu extends Component {
                             <span>03.</span><Link to="/portfolio">Portfolio.</Link>
                         </li>
                         <li>
-                            <span>04.</span><Link to="/blog">Blog.</Link>
-                        </li>
-                        <li>
-                            <span>05.</span><Link to="/contact">Contact.</Link>
+                            <span>04.</span><Link to="/contact">Contact.</Link>
                         </li>
                     </ul>
                 </nav>

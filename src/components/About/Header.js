@@ -5,6 +5,10 @@ import Logo from '../Base/Logo'
 import Menu from '../Base/Menu'
 
 export default class Header extends Component {
+    state = {
+        menuOpen: false
+    }
+
     componentDidMount = () => {
         this.animHeader()
     }
@@ -24,9 +28,14 @@ export default class Header extends Component {
             .from(titleFourth, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
     }
 
+    handleMenu = () => {
+        this.setState({ menuOpen: !this.state.menuOpen })
+    }
+
     render() {
         return (
             <div className="aboutHeader">
+                <Menu isOpen={ this.handleMenu } />
                 <div className="left">
                     <Logo />
                 </div>
