@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 export default class Cursor extends Component {
     state = {
-        x: 0,
-        y: 0
+        x: -100,
+        y: -100
     }
 
     componentDidMount = () => {

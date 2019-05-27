@@ -6,6 +6,7 @@ import Footer from "./Base/Footer"
 import Cursor from '../components/Base/Cursor'
 import "../scss/main.scss"
 
+
 const Layout = ({ children }) => (
   <React.Fragment>
     <Cursor />

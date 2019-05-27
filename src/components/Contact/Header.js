@@ -19,13 +19,11 @@ export default class Header extends Component {
         const titleFirst = this.refs.titleFirst
         const titleSec = this.refs.titleSec
         const titleThird = this.refs.titleThird
-        const titleFourth = this.refs.titleFourth
 
         titleTl
             .from(titleFirst, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut })
             .from(titleSec, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
             .from(titleThird, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
-            .from(titleFourth, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
     }
 
     handleMenu = () => {
@@ -42,22 +40,17 @@ export default class Header extends Component {
                 <div className="content">
                     <h1>
                         <span ref="titleFirst">
-                            Un travail sélectionné qui a été créé
+                           Aimez-vous ce que vous voyez ?
                         </span>
                     </h1>
                     <h1>
                         <span ref="titleSec">
-                            avec une passion profonde.
+                            Vous avez un projet web dont
                         </span>
                     </h1>
                     <h1>
                         <span ref="titleThird">
-                            Tous ce qui compte pour moi est
-                        </span>
-                    </h1>
-                    <h1>
-                        <span ref="titleFourth">
-                            le succès de mes clients.
+                            vous souhaitez me parler ?
                         </span>
                     </h1>
                 </div>

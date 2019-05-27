@@ -5,9 +5,6 @@ import SEO from "../components/seo"
 import About from '../components/Home/About'
 import Portfolio from '../components/Home/Portfolio'
 
-// const ReallySmoothScroll = require('really-smooth-scroll');
-// ReallySmoothScroll.shim();
-
 
 const IndexPage = () => (
   <Layout>
