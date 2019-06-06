@@ -1,0 +1,73 @@
+.projectHeader {
+    height: 65vh;
+
+    h1, h2, p {
+        color: $white;
+    }
+
+    h1 {
+        padding-top: 1rem;
+        padding-left: 2.5rem;
+        padding-bottom: 1rem;
+        color: $yellow;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        letter-spacing: 2px;
+        font-weight: 400;
+        width: 60%;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        font-family: $primaryFont;
+    }
+
+    p {
+        font-weight: 300;
+    }
+
+    .nav {
+        &::before {
+            color: $white !important;
+        }
+
+        .nav--bar-mr,
+        .nav--bar-mr::before,
+        .nav--bar-mr::after,
+        .nav--bar-ml,
+        .nav--bar-ml::before,
+        .nav--bar-ml::after {
+            background-color: $white !important;
+        }
+
+        button:hover {
+            .nav--bar-mr,
+            .nav--bar-mr::before,
+            .nav--bar-mr::after,
+            .nav--bar-ml,
+            .nav--bar-ml::before,
+            .nav--bar-ml::after {
+                background-color: $brown !important;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        .contentTitle {
+            display: flex;
+            overflow: hidden;
+    
+            .contentTitle-bar {
+                display: inline-block;
+                width: 2px;
+                height: 100%;
+                background-color: $white;
+                transform-origin: 0% 0%;
+            }
+        }
+    }
+}
