@@ -9,5 +9,41 @@
     height: 100vh;
     background-color: $lightGray;
     color: $black;
-    font-size: 10rem;
+    font-size: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loading-logo {
+        position: relative;
+        font-family: $secondaryFont;
+        display: inline-block;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: $black;
+            bottom: -.75rem;
+            left: auto;
+            animation: 1.8s loadingLogo linear;
+        }
+    }
+}
+
+@keyframes loadingLogo {
+    0% {
+        width: 0;
+    }
+
+    50% {
+        width: 60%;
+    }
+
+    100% {
+        width: 100%;
+    }
 }

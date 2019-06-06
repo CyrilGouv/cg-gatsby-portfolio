@@ -34,7 +34,7 @@ export default class Header extends Component {
 
     render() {
         return (
-            <div className="aboutHeader pageHeader">
+            <div className="aboutHeader pageHeader portfolioHeader">
                 <Menu isOpen={ this.handleMenu } />
                 <div className="left">
                     <Logo />

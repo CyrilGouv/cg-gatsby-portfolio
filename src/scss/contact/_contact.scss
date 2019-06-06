@@ -27,14 +27,43 @@
         }
     }
 
-    .contactContent-form {
+    .contactContent-infos {
         width: 85%;
-        margin: 20rem auto 0 auto;
+        margin: 10rem auto 10rem auto;
+        display: flex;
+        justify-content: space-between;
+
+        h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.375em;
+            color: $lightBlack;
+
+            .infos-disponibility--circle {
+                color: green;
+                font-size: 0.55rem;
+                margin-right: .75rem;
+            }
+        }
+
+        address {
+            font-style: normal;
+            color: $lightBlack;
+        }
+    }
+
+    .contactContent-form {
+        width: 75%;
+        margin: 0 auto 0 auto;
         padding: 0 0 20rem 0;
         display: flex;
 
         form {
             width: 80%;
+            margin: 0 auto;
         }
 
         .name, .email, .message {

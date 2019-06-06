@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Tilt from 'react-tilt'
+import { FaCircle } from 'react-icons/fa';
 
 import arrowBlack from '../../images/base/arrow-black.svg'
 
@@ -28,6 +29,27 @@ const ContactContent = () => (
 
             }}
         />
+        
+        <div className="contactContent-infos">
+            <div className="infos-address">
+                <h4>Adresse</h4>
+                <p>
+                    <address>
+                        62 rue Diamant<br />
+                        40600 Biscarrosse
+                    </address>
+                </p>
+            </div>
+            <div className="infos-disponibility">
+                <h4>Disponibilité</h4>
+                <p><FaCircle class="infos-disponibility--circle" />Je suis joignable</p>
+            </div>
+            <div className="infos-email">
+                <h4>Email</h4>
+                <p>contact@cyrilgouverneur.com</p>
+            </div>
+        </div>
+
         <div className="contactContent-form">
             <form action="">
                 <div className="form-group">

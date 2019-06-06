@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import { TweenMax, Power2 } from "gsap/TweenMax";
+import { TweenMax, Power2 } from "gsap/TweenMax"
+import Logo from './Logo'
 
 export default class Loading extends Component {
 
     componentDidMount() {
         setTimeout(() => {
             this.initAnim()
-        }, 2000)
+        }, 2500)
     }
     
 
@@ -19,7 +20,9 @@ export default class Loading extends Component {
     render() {
         return (
             <div className="loading" ref="loading">
-                
+                <div className="loading-logo">
+                    Cg.
+                </div>
             </div>
         )
     }

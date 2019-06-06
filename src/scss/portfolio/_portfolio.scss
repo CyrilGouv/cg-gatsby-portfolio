@@ -1,0 +1,60 @@
+.projectContent, .portfolioHeader {
+    background-color: $black;
+}
+
+.portfolioHeader {
+    .content {
+        h1 {
+            color: $white;
+        }
+    }
+
+    .right {
+        .nav {
+            &::before {
+                color: $white;
+            }
+
+            .nav--bar-mr {
+                background-color: $white;
+
+                &::before, &::after {
+                    background-color: $white;
+                }
+            }
+            .nav--bar-ml {
+                background-color: $white;
+
+                &::before, &::after {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
+
+.projectContent {
+    figcaption {
+        h3 {
+            color: $white;
+        }
+    }
+
+    .projects-links {
+        color: $white;
+    }
+
+    .reveal-portfolio--mask {
+        background-color: $black !important;
+    }
+
+    .reveal-portfolio--second-mask {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: $black;
+        top: -100%;
+        left: 0;
+        transform-origin: 100% 100%;
+    }
+}

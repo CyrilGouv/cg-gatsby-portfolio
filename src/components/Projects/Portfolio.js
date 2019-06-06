@@ -5,6 +5,7 @@ import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
 import ScrollMagic from '../Base/ScrollMagic'
 
 import arrowBlack from '../../images/base/arrow-black.svg'
+import arrowWhite from '../../images/base/arrow-white.svg'
 
 
 export default class Portfolio extends Component {
@@ -49,11 +50,11 @@ export default class Portfolio extends Component {
         })
         .setTween(
             portfolioTl
-                .from(".weStreet-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".weStreet-project > .reveal-portfolio--second-mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.weStreet h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.weStreet .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
 
-                .from(".leheadiste-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".leheadiste-project > .reveal-portfolio--second-mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.leheadiste h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.leheadiste .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
         )
@@ -82,7 +83,7 @@ export default class Portfolio extends Component {
                                         <figcaption><h3>La French Coin</h3></figcaption>
                                         <Link className="projects-links btn--default" to="/projet/bitcoin">
                                             Voir le projet
-                                            <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
+                                            <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                     <figure className="flag">
@@ -93,7 +94,7 @@ export default class Portfolio extends Component {
                                         <figcaption><h3>Drapeaux Discount</h3></figcaption>
                                         <Link className="projects-links btn--default" to="/projet/drapeaux-discount">
                                             Voir le projet
-                                            <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
+                                            <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                 </div>
@@ -101,23 +102,23 @@ export default class Portfolio extends Component {
                                     <figure className="weStreet">
                                         <Link to="/projet/we-street" className="weStreet-project projects">
                                             <Img fluid={ weStreet } />
-                                            <div className="reveal-portfolio--mask"></div>
+                                            <div className="reveal-portfolio--second-mask"></div>
                                         </Link>
                                         <figcaption><h3>We Street</h3></figcaption>
                                         <Link className="projects-links btn--default" to="/projet/we-street">
                                             Voir le projet
-                                            <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
+                                            <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                     <figure className="leheadiste">
                                         <Link to="/projet/le-headiste" className="leheadiste-project projects">
                                             <Img fluid={ leHeadiste } />
-                                            <div className="reveal-portfolio--mask"></div>
+                                            <div className="reveal-portfolio--second-mask"></div>
                                         </Link>
                                         <figcaption><h3>Le Headiste</h3></figcaption>
                                         <Link className="projects-links btn--default" to="/projet/le-headiste">
                                             Voir le projet
-                                            <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
+                                            <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                 </div>
