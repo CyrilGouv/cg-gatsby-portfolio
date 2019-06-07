@@ -58,19 +58,18 @@ export default class ProjectContent extends Component {
 
     render() {
         return (
-            <section className="singleProjectContent singleLafrenchcoin" ref="project">
+            <section className="singleProjectContent singleDrapeauxDiscount" ref="project">
                 <div className="singleProject-blurb">
                     <div className="singleProject-blurb-intro" ref="projectBlurb">
                         <p>
-                            La French Coin est un projet personnel qui a pour but la création d'un annuaire de géolocalisation regroupant
-                            les entreprises françaises acceptant les crypto-monnaies comme moyen de paiements. Cette application web
-                            a été réalisée en MERN stack et en utilisant une bibliothèque JavaScript libre de cartographie en ligne appellée <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a>.
+                            Drapeaux Discount est une boutique en ligne de vente de drapeaux de qualité et offrant un large choix de pays, régions, événement.
+                            Ce projet a été réalisé en combinant Wordpress, Woocommerce et le thème Avada pour obtenir un site e-commerce moderne.
                         </p>
                         <p className="singleProject-blurb-year">ANNÉE:</p>
                         <p>2018</p>
                         <p className="singleProject-blurb-client">CLIENT:</p>
-                        <p>Projet Personnel</p>
-                        <a href="https://www.lafrenchcoin.com" target="_blank" rel="noopener noreferrer" className="btn--default">
+                        <p>Drapeaux Discount</p>
+                        <a href="https://www.drapeaux-discount.com" target="_blank" rel="noopener noreferrer" className="btn--default">
                             Voir le site
                             <img src={ arrowImg } alt="Flèche appel à l'action vers à propos"/>    
                         </a>
@@ -81,7 +80,7 @@ export default class ProjectContent extends Component {
                             render={ data => {
                                 return (
                                     <figure>
-                                        <Img fluid={ data.mobile.childImageSharp.fluid } />
+                                        <Img fluid={ data.mobileDrapeaux.childImageSharp.fluid } />
                                         <div className="singleProject--mask"></div>
                                     </figure>
                                 )
@@ -94,7 +93,7 @@ export default class ProjectContent extends Component {
                     <div className="singleProject-color-title">
                         <p ref="colorTitle">COULEURS</p>
                     </div>
-                    <div className="singleProject-color-pick laFrenchCoinSingle-pick" ref="colorBox">
+                    <div className="singleProject-color-pick drapeauxDiscountSingle-pick" ref="colorBox">
                         <div className="pick-first">
                             <p className="pick-color-first">#e8973d</p>
                         </div>
@@ -120,15 +119,7 @@ export default class ProjectContent extends Component {
 
 const Image = graphql`
     {
-        mobile:file(relativePath:{eq: "portfolio/mockup-mobile-lafrenchcoin.png"}) {
-            childImageSharp {
-                fluid(maxHeight: 600) {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
-
-        ordi:file(relativePath:{eq: "portfolio/mockup-ordi-lafrenchcoin.png"}) {
+        mobileDrapeaux:file(relativePath:{eq: "portfolio/mockup-mobile-drapeaux-discount.png"}) {
             childImageSharp {
                 fluid(maxHeight: 600) {
                     ...GatsbyImageSharpFluid_tracedSVG

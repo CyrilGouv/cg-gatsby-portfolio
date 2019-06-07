@@ -25,7 +25,7 @@ export default class Portfolio extends Component {
         // Target
         const targetHomePortfolio = this.refs.targetHomePortfolio
 
-        const revealPortfolioFirst = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: targetHomePortfolio,
             triggerHook: 0.65,
             reverse: false
@@ -43,7 +43,7 @@ export default class Portfolio extends Component {
         .addTo(controller)
 
 
-        const revealPortfolioSecond = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: targetHomePortfolio,
             triggerHook: 1,
             reverse: false
@@ -76,12 +76,12 @@ export default class Portfolio extends Component {
                             <div className="homePortfolio-wrapper">
                                 <div className="projects--first">
                                     <figure className="bitcoin">
-                                        <Link to="/projet/bitcoin" className="bitcoin-project projects">
+                                        <Link to="/projet/lafrenchcoin" className="bitcoin-project projects">
                                             <Img fluid={ bitcoin } />
                                             <div className="reveal-portfolio--mask"></div>
                                         </Link>
                                         <figcaption><h3>La French Coin</h3></figcaption>
-                                        <Link className="projects-links btn--default" to="/projet/bitcoin">
+                                        <Link className="projects-links btn--default" to="/projet/lafrenchcoin">
                                             Voir le projet
                                             <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>

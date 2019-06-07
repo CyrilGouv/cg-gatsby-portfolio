@@ -1,5 +1,5 @@
 .projectHeader {
-    height: 65vh;
+    height: 70vh;
 
     h1, h2, p {
         color: $white;
@@ -16,14 +16,14 @@
         font-size: 1.35rem;
         letter-spacing: 2px;
         font-weight: 400;
+        padding-left: 2.5rem;
         width: 60%;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
         font-family: $primaryFont;
     }
 
     p {
         font-weight: 300;
+        padding-left: 2.5rem;
     }
 
     .nav {
@@ -69,5 +69,195 @@
                 transform-origin: 0% 0%;
             }
         }
+    }
+}
+
+.singleProjectContent {    
+    position: relative;
+    z-index: 1;
+    padding: 10rem 0;
+    width: 85%;
+    margin: 0 auto;
+
+    .singleProject-blurb {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .singleProject-blurb-intro {
+            width: 40%;
+
+            p {
+                font-size: 1.125rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: $lightBlack;
+
+                &.singleProject-blurb-year,
+                &.singleProject-blurb-client {
+                    margin-top: 3rem;
+                    color: $black;
+                    line-height: .35rem;
+                    font-family: $secondaryFont;
+                }
+            }
+
+            .btn--default {
+                display: inline-block;
+                margin-top: 1rem;
+            }
+        }
+
+        .singleProject-img {
+            width: 50%;
+            height: 500px;
+            background-color: $lightGray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+
+            .singleProject--mask {
+                position: absolute;
+                z-index: 2;
+                top: -100%;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: $white;
+            }
+
+            .gatsby-image-wrapper {
+                width: 225px;
+                
+                img {
+                    z-index: 2;
+                }
+            }
+        }
+    }
+
+    &.singleLafrenchcoin {
+        .singleProject-img {
+            background-color: $lafrenchcoin !important;
+        }
+    }
+    &.singleDrapeauxDiscount {
+        .singleProject-img {
+            background-color: $drapeauxDiscount !important;
+        }
+    }
+
+    .singleProject-color {
+        margin-top: 10rem;
+
+        .singleProject-color-title {
+            font-size: 5rem;
+            letter-spacing: 5px;
+            text-align: center;
+            font-weight: 700;
+            background-color: $lightGray;
+            padding: 5rem 0 1rem 0;
+        }
+
+        .singleProject-color-pick {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, $lightGray 50%, $white 50%);
+
+            .pick-first,
+            .pick-second,
+            .pick-third,
+            .pick-fourth {
+                width: 12rem;
+                height: 15rem;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                border-radius: 2px;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.05), 0 10px 10px rgba(0,0,0,0.12);
+
+                .pick-color-first,
+                .pick-color-second,
+                .pick-color-third,
+                .pick-color-fourth {
+                    background-color: rgba($lightGray, .35);
+                    width: 100%;
+                    text-align: center;
+                    padding: 1rem 0;
+                    font-size: 1rem;
+                }
+            }
+
+            .pick-second {
+                margin: 0 3rem;
+            }
+
+            .pick-fourth {
+                margin: 0 3rem;
+            }
+
+            &.laFrenchCoinSingle-pick {
+                .pick-first {
+                    background-color: $lafrenchcoin;
+                }
+                .pick-second {
+                    background-color: #333333;
+                }
+                .pick-third {
+                    background-color: #000000;
+                }
+                .pick-fourth {
+                    background-color: #ffffff;
+                }
+            }
+            &.drapeauxDiscountSingle-pick {
+                .pick-first {
+                    background-color: $drapeauxDiscount;
+                }
+                .pick-second {
+                    background-color: #212121;
+                }
+                .pick-third {
+                    background-color: #333333;
+                }
+                .pick-fourth {
+                    background-color: #999999;
+                }
+            }
+        }
+    }
+}
+
+.singleProject-color {
+    position: relative;
+    overflow: hidden;
+
+    .singleProject-color--mask {
+        position: absolute;
+        z-index: 2;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+    }
+}
+
+
+.projectOrdi {
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10rem;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    .gatsby-image-wrapper {
+        width: 65%;
     }
 }

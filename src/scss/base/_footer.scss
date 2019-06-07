@@ -1,6 +1,8 @@
 .footer {
     background-color: $lightGray;
     padding: 6rem 0 1rem 0;
+    position: relative;
+    z-index: 1;
 
     .footer-content {
         margin: 0 auto;

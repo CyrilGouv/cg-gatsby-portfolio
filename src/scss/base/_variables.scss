@@ -30,8 +30,11 @@
     font-style: normal;
 }
 
-$primaryFont: 'Butler';
-$secondaryFont: 'Butler Stencil';
+@import url('https://fonts.googleapis.com/css?family=Hind:300,400,700&display=swap');
+
+$secondaryFont: 'Butler';
+// $secondaryFont: 'Butler Stencil';
+$primaryFont: 'Hind', sans-serif;
 
 /* COLORS */
 $black: #000;
@@ -42,3 +45,6 @@ $lightGray: #F6F6F7;
 $brown: #A5601C;
 $lightBlack: #474143;
 $yellow: #EFA302;
+
+$lafrenchcoin: #E8973D;
+$drapeauxDiscount: #D62C1B;
