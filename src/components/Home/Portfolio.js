@@ -100,23 +100,23 @@ export default class Portfolio extends Component {
                                 </div>
                                 <div className="projects--second">
                                     <figure className="weStreet">
-                                        <Link to="/projet/we-street" className="weStreet-project projects">
+                                        <Link to="/projet/westreet" className="weStreet-project projects">
                                             <Img fluid={ weStreet } />
                                             <div className="reveal-portfolio--mask"></div>
                                         </Link>
                                         <figcaption><h3>We Street</h3></figcaption>
-                                        <Link className="projects-links btn--default" to="/projet/we-street">
+                                        <Link className="projects-links btn--default" to="/projet/westreet">
                                             Voir le projet
                                             <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                     <figure className="leheadiste">
-                                        <Link to="/projet/le-headiste" className="leheadiste-project projects">
+                                        <Link to="/projet/leheadiste" className="leheadiste-project projects">
                                             <Img fluid={ leHeadiste } />
                                             <div className="reveal-portfolio--mask"></div>
                                         </Link>
                                         <figcaption><h3>Le Headiste</h3></figcaption>
-                                        <Link className="projects-links btn--default" to="/projet/le-headiste">
+                                        <Link className="projects-links btn--default" to="/projet/leheadiste">
                                             Voir le projet
                                             <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
                                         </Link>
