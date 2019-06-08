@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { FaHeart } from 'react-icons/fa';
 import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
-import CSSRulePlugin from "gsap/CSSRulePlugin"
 import ScrollMagic from '../Base/ScrollMagic'
 
 
@@ -30,7 +29,7 @@ export default class Footer extends Component {
         const footerAddress = this.refs.footerAddress
         const footerCopy = this.refs.footerCopy
 
-        const revealFooter = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: targetFooter,
             triggerHook: 1,
             reverse: false

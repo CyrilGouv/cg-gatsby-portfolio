@@ -13,7 +13,7 @@ const Leheadiste = ({ data }) => (
     <BackgroundSection 
         img={ data.leHeadiste.childImageSharp.fluid }
         title="Le Headiste"
-        h2Title="Boutique entièrement dédiée à votre tête."
+        h2Title="La boutique entièrement dédiée à votre tête."
         subtitle="Web Design"
         className="lafrenchcoinProject"
     />

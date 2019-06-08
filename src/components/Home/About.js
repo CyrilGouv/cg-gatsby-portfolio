@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Link, graphql, StaticQuery } from "gatsby"
 import Img from 'gatsby-image'
-import { TimelineLite, Power1, Power2, Power4 } from "gsap/TweenMax";
+import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
 import CSSRulePlugin from "gsap/CSSRulePlugin"
 import ScrollMagic from '../Base/ScrollMagic'
 

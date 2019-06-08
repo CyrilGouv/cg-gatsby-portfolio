@@ -19,7 +19,7 @@ export default class What extends Component {
         const whatDesc = this.refs.whatDesc.children
         const whatImg = this.refs.whatImg
 
-        const revealWhat = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: what,
             triggerHook: .85,
             reverse: false
@@ -48,10 +48,10 @@ export default class What extends Component {
                             Je place toujours l'expérience de l'utilisateur au coeur de la conception d'un site web en réfléchissant à l'ensemble des émotions que peuvent ressentir un visiteur.
                         </p>
                         <p>
-                            Même si j'aime particulièrement travailler avec des tecnologies modernes tels que <a href="#">Gatsby Js</a> qui permet de créer des sites web ultra rapides, modernes et performants. Des critères SEO toujours de plus en plus importants aujourd'hui pour ne pas se faire pénaliser par Google.
+                            Même si j'aime particulièrement travailler avec des tecnologies modernes tels que <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby Js</a> qui permet de créer des sites web ultra rapides, modernes et performants. Des critères SEO toujours de plus en plus importants aujourd'hui pour ne pas se faire pénaliser par Google.
                         </p>
                         <p>
-                            Je conçois également des sites internet professionnels en utilisant le CMS <a href="#">Wordpress</a> qui vous permettra de gérer du contenu ou pour vos besoin d'E-commerce grace à l'extension WooCommerce.
+                            Je conçois également des sites internet professionnels en utilisant le CMS <a href="https://fr.wordpress.org/" target="_blank" rel="noopener noreferrer">Wordpress</a> qui vous permettra de gérer du contenu ou pour vos besoin d'E-commerce grace à l'extension WooCommerce.
                         </p>
                         <p>
                             J'intègre vos maquettes graphiques en utilisant du HTML5, CSS3 et JavaScript en respectant les standards du web. De plus, je teste la compatibilité de votre site (Cross Browser Testing) sur les navigateurs les plus populaires tels que Chrome, Firefox, Safari et Edge.

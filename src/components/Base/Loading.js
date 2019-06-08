@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { TweenMax, Power2 } from "gsap/TweenMax"
-import Logo from './Logo'
 
 export default class Loading extends Component {
 

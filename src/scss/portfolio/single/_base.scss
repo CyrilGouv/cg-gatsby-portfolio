@@ -148,6 +148,16 @@
             background-color: $drapeauxDiscount !important;
         }
     }
+    &.singleLeheadiste {
+        .singleProject-img {
+            background-color: $leheadiste !important;
+        }
+    }
+    &.singleWestreet {
+        .singleProject-img {
+            background-color: $westreet !important;
+        }
+    }
 
     .singleProject-color {
         margin-top: 10rem;
@@ -225,6 +235,34 @@
                 }
                 .pick-fourth {
                     background-color: #999999;
+                }
+            }
+            &.leheadisteSingle-pick {
+                .pick-first {
+                    background-color: $leheadiste;
+                }
+                .pick-second {
+                    background-color: $black;
+                }
+                .pick-third {
+                    background-color: $white;
+                }
+                .pick-fourth {
+                    background-color: #d9d9d9;
+                }
+            }
+            &.westreetSingle-pick {
+                .pick-first {
+                    background-color: $westreet;
+                }
+                .pick-second {
+                    background-color: #3a3a3a;
+                }
+                .pick-third {
+                    background-color: $white;
+                }
+                .pick-fourth {
+                    background-color: #f9f6f6;
                 }
             }
         }

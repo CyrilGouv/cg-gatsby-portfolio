@@ -19,7 +19,7 @@ export default class Who extends Component {
         const whoTitle = this.refs.whoTitle
         const whoDesc = this.refs.whoDesc.children
 
-        const revealWho = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: whoContent,
             triggerHook: 1,
             reverse: false

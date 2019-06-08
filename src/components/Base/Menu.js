@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { TimelineLite, TweenMax, Power2, Power1, Power4 } from "gsap/TweenMax";
+import { TimelineLite, TweenMax, Power1, Power4 } from "gsap/TweenMax";
 
 import Logo from '../Base/Logo'
 

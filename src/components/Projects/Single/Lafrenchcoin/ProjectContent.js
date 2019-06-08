@@ -64,7 +64,7 @@ export default class ProjectContent extends Component {
                         <p>
                             La French Coin est un projet personnel qui a pour but la création d'un annuaire de géolocalisation regroupant
                             les entreprises françaises acceptant les crypto-monnaies comme moyen de paiements. Cette application web
-                            a été réalisée en MERN stack et en utilisant une bibliothèque JavaScript libre de cartographie en ligne appellée <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a>.
+                            a été réalisée en MERN stack et en utilisant une bibliothèque JavaScript libre de cartographie en ligne appellée <a className="inline-link" href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a>.
                         </p>
                         <p className="singleProject-blurb-year">ANNÉE:</p>
                         <p>2018</p>

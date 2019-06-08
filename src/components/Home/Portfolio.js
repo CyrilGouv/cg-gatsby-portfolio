@@ -24,7 +24,7 @@ export default class Portfolio extends Component {
         // Target
         const targetHomePortfolio = this.refs.targetHomePortfolio
 
-        const revealPortfolioFirst = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: targetHomePortfolio,
             triggerHook: 0.65,
             reverse: false
@@ -42,7 +42,7 @@ export default class Portfolio extends Component {
         .addTo(controller)
 
 
-        const revealPortfolioSecond = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: targetHomePortfolio,
             triggerHook: 1,
             reverse: false

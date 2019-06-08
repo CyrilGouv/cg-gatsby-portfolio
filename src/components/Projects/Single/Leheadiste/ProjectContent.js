@@ -6,8 +6,6 @@ import ScrollMagic from '../../../Base/ScrollMagic'
 
 import ProjectOrdi from './ProjectOrdi'
 
-import arrowImg from '../../../../images/base/arrow-black.svg'
-
 export default class ProjectContent extends Component {
 
     componentDidMount = () => {
@@ -62,18 +60,13 @@ export default class ProjectContent extends Component {
                 <div className="singleProject-blurb">
                     <div className="singleProject-blurb-intro" ref="projectBlurb">
                         <p>
-                            La French Coin est un projet personnel qui a pour but la création d'un annuaire de géolocalisation regroupant
-                            les entreprises françaises acceptant les crypto-monnaies comme moyen de paiements. Cette application web
-                            a été réalisée en MERN stack et en utilisant une bibliothèque JavaScript libre de cartographie en ligne appellée <a href="https://leafletjs.com/" target="_blank" rel="noopener noreferrer">Leaflet</a>.
+                            Le Headiste est une boutique en ligne spécialisée dans la vente de chapeaux tendances et originals.
+                            Ce projet de web design a été réalisé avec le logiciel <a className="inline-link" href="https://www.sketch.com/" target="_blank" rel="noopener noreferrer">Sketch App.</a>
                         </p>
                         <p className="singleProject-blurb-year">ANNÉE:</p>
-                        <p>2018</p>
+                        <p>2019</p>
                         <p className="singleProject-blurb-client">CLIENT:</p>
-                        <p>Projet Personnel</p>
-                        <a href="https://www.lafrenchcoin.com" target="_blank" rel="noopener noreferrer" className="btn--default">
-                            Voir le site
-                            <img src={ arrowImg } alt="Flèche appel à l'action vers à propos"/>    
-                        </a>
+                        <p>Le Headiste</p>
                     </div>
                     <div className="singleProject-img">
                         <StaticQuery
@@ -94,18 +87,18 @@ export default class ProjectContent extends Component {
                     <div className="singleProject-color-title">
                         <p ref="colorTitle">COULEURS</p>
                     </div>
-                    <div className="singleProject-color-pick leheadiste-pick" ref="colorBox">
+                    <div className="singleProject-color-pick leheadisteSingle-pick" ref="colorBox">
                         <div className="pick-first">
-                            <p className="pick-color-first">#e8973d</p>
+                            <p className="pick-color-first">#f1b8c4</p>
                         </div>
                         <div className="pick-second">
-                            <p className="pick-color-second">#333333</p>
+                            <p className="pick-color-second">#000000</p>
                         </div>
                         <div className="pick-third">
-                            <p className="pick-color-third">#000000</p>
+                            <p className="pick-color-third">#ffffff</p>
                         </div>
                         <div className="pick-fourth">
-                            <p className="pick-color-fourth">#ffffff</p>
+                            <p className="pick-color-fourth">#d9d9d9</p>
                         </div>
                     </div>
                 </div>

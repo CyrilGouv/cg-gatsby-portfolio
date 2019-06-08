@@ -18,7 +18,7 @@ export default class Love extends Component {
         const loveTitle = this.refs.loveTitle
         const loveDesc = this.refs.loveDesc.children
 
-        const revealLove = new ScrollMagic.Scene({
+        new ScrollMagic.Scene({
             triggerElement: love,
             triggerHook: .85,
             reverse: false
@@ -44,7 +44,7 @@ export default class Love extends Component {
                     <div className="love-desc" ref="loveDesc">
                         <p>
                             En dehors de ma vie professionnel, j'aime passer du temps avec ma petite famille et voyager.
-                            Sportif depuis toujours, j'aime également m'évader l'esprit en pleine nature en faisant du vélo, de la course à pied ou aller faire quelques longueurs en piscine.
+                            Sportif depuis toujours, j'aime également m'évader l'esprit en pleine nature en faisant du vélo, de la course à pied ou soulever un peu de fonte.
                         </p>
                         <p>
                             Une fois à la maison, je passe mon temps à regarder du sport tels que du cyclisme et de la NBA ou à regarder des séries avec ma femme.
