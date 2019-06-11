@@ -13,7 +13,7 @@ export default class Menu extends Component {
         const menu = this.refs.menu
         const menuLinksLi = this.refs.menuLinksUl.children
 
-        TweenMax.set(menu, { y: '-100%' })
+        // TweenMax.set(menu, { y: '-100%' })
         TweenMax.set(menuLinksLi, { autoAlpha: 0, y: '-10%' })
     }
     

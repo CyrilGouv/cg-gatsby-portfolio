@@ -266,3 +266,232 @@
         }
     }
 }
+
+
+/* Large Devices, Desktops */
+@media (min-width: 1199px) and (max-width: 1449px) {
+    .aboutContent {
+        .who {
+            .who-content {
+                h2 {
+                    font-size: 1.275rem !important;
+                }
+
+                p {
+                    font-size: 1.025rem !important;
+                }
+            }
+        }
+
+        .what {
+            .what-blurb {
+                h2 {
+                    font-size: 1.275rem !important;
+                }
+
+                p {
+                    font-size: 1.025rem !important;
+                }
+            }
+        }
+
+        .love {
+            .love-blurb {
+                h2 {
+                    font-size: 1.275rem !important;
+                }
+
+                p {
+                    font-size: 1.025rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+    .aboutContent {
+        .who {
+            .who-content {
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+        }
+
+        .what {
+            .what-blurb {
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+        }
+
+        .love {
+            .love-blurb {
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .aboutContent {
+        .who {
+            .who-content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .who-content-img {
+                    width: 55%;
+                }
+
+                .who-content-desc {
+                    width: 100%;
+                    margin-top: 5rem;
+                }
+
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+        }
+
+        .what {
+            .what-blurb {
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+
+            .what-img--digital {
+                width: 100% !important;
+            }
+        }
+
+        .love {
+            .love-blurb {
+                h2 {
+                    font-size: 1.175rem !important;
+                }
+
+                p {
+                    font-size: 0.925rem !important;
+                }
+            }
+
+            .love-img--left,
+            .love-img--right {
+                width: 50% !important;
+            }
+            .love-img--center {
+                width: 55% !important;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .aboutContent {
+        .who {
+            .who-content {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .who-content-img {
+                    width: 65%;
+                }
+
+                .who-content-desc {
+                    width: 100%;
+                    margin-top: 5rem;
+                }
+
+                h2 {
+                    font-size: 1.075rem !important;
+                }
+
+                p {
+                    font-size: 0.825rem !important;
+                }
+            }
+        }
+
+        .what {
+            .what-blurb {
+                h2 {
+                    font-size: 1.075rem !important;
+                }
+
+                p {
+                    font-size: 0.825rem !important;
+                }
+            }
+
+            .what-img-content {
+                flex-direction: column !important;
+
+                .what-img--left {
+                    width: 100% !important;
+                    height: 450px !important;
+                }
+
+                .what-img--right {
+                    display: none !important;
+                }
+            }
+
+            .what-img--digital {
+                width: 100% !important;
+            }
+        }
+
+        .love {
+            padding-bottom: 12rem;
+
+            .love-blurb {
+                h2 {
+                    font-size: 1.075rem !important;
+                }
+
+                p {
+                    font-size: 0.825rem !important;
+                }
+            }
+
+            .love-img {
+                display: none;
+            }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    
+}

@@ -128,3 +128,59 @@
         }
     }
 }
+
+
+/* Large Devices, Desktops */
+@media (min-width: 1199px) and (max-width: 1449px) {
+    .aboutHeader {
+        .content {
+            h1 {
+                font-size: 3rem !important;
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+    .aboutHeader {
+        .content {
+            h1 {
+                font-size: 2.35rem !important;
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .aboutHeader {
+        .content {
+            h1 {
+                font-size: 1.875rem !important;
+            }
+        }
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .aboutHeader {
+        .content {
+            h1 {
+                font-size: 1.15rem !important;
+            }
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .aboutHeader {
+        .content {
+            h1 {
+                font-size: 0.95rem !important;
+            }
+        }
+    }
+}
