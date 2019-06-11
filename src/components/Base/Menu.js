@@ -36,8 +36,9 @@ export default class Menu extends Component {
         const menuLinksLi = this.refs.menuLinksUl.children
 
         openTl
-            .set('.singleProjectContent', { zIndex: '-1' })
-            .set('.footer', { zIndex: '' })
+            .set('.singleProjectContent', { zIndex: '-888', autoAlpha: 0 })
+            .set('.gatsby-image-wrapper', { overflow: 'visible' })
+            .set('.footer', { zIndex: '-888', autoAlpha: 0 })
             .to(menu, 1.25, { y: '100%', ease: Power4.easeOut })
             .staggerTo(menuLinksLi, 0.5, { autoAlpha: 1, transform: 'translateY(10%)', ease: Power1.easeOut }, 0.25)
     }
@@ -56,8 +57,9 @@ export default class Menu extends Component {
         closeTl
             .staggerTo(menuLinksLiArrReverse, 0.5, { autoAlpha: 0, transform: 'translateY(-10%)', ease: Power1.easeOut }, 0.25)        
             .to(menu, 1.25, { y: '-100%', ease: Power4.easeOut })
-            .set('.singleProjectContent', { zIndex: '1' })
-            .set('.footer', { zIndex: '' })
+            .set('.gatsby-image-wrapper', { overflow: 'hidden' })
+            .set('.singleProjectContent', { zIndex: '1', autoAlpha: 1 })
+            .set('.footer', { zIndex: '1', autoAlpha: 1  })
     }
 
 

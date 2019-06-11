@@ -29,30 +29,6 @@ a {
     }
 }
 
-.bg--black {
-    background-color: $black !important;
-    transition: background-color .55s;
-
-    .hero {
-        opacity: 0;
-        transition: opacity 1s;
-    }
-}
-
-.bg--white {
-    background-color: $lightGray !important;
-    transition: background-color .55s;
-
-    &#portfolio .container {
-        opacity: 0;
-        transition: opacity 1s;
-    }
-}
-
-.txt-yellow {
-    color: $yellow;
-}
-
 .btn {
     position: relative;
     z-index: 1;
@@ -140,4 +116,39 @@ a {
 
 .inline-link {
     color: inherit;
+}
+
+
+/** +=RESPONSIVE **/
+@media (min-width: 1199px) and (max-width: 1449px) {
+    .btn,
+    .btn--default {
+        font-size: 0.95rem;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .btn,
+    .btn--default {
+        font-size: 0.9rem !important;
+    }
+}
+
+@media only screen and (max-width : 992px) {
+    .btn,
+    .btn--default {
+        font-size: 0.85rem !important;
+    }
+}
+
+@media only screen and (max-width : 768px) {
+    .btn,
+    .btn--default {
+        font-size: 0.75rem !important;
+        padding: 0.9rem 1rem !important;
+
+        img {
+            width: 1.1rem !important;
+        }
+    }
 }

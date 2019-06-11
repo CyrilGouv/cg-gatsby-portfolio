@@ -2,6 +2,7 @@
     width: 85%;
     margin: 0 auto;
     padding: 0 0 20rem 0;
+    overflow: hidden;
 
     .bitcoin-project, .flag-project, .leheadiste-project, .weStreet-project {
         display: block;
@@ -125,8 +126,8 @@
             margin: 280px 0 0 0;
 
             .gatsby-image-wrapper {
-                width: 750px !important;
-                height: 400px !important;
+                width: 750px;
+                height: 400px;
             }
 
             .leheadiste-project {
@@ -135,6 +136,134 @@
                     height: 400px !important;
                 }
             }
+        }
+    }
+}
+
+
+@media (min-width: 1380px) and (max-width: 1449px) {
+    .projects--first {
+        .bitcoin {
+            width: 720px !important;
+        }
+
+        .flag {
+            width: 370px !important;
+        }
+    }
+
+    .projects--second {
+        .weStreet {
+            width: 370px !important;
+        }
+        .leheadiste {
+            width: 720px !important;
+        }
+    }
+}
+
+@media (min-width: 1250px) and (max-width: 1379px) {
+    .projects {
+        height: 100%;
+    }
+
+    .projects--first {
+        .bitcoin {
+            width: 650px !important;
+            height: 375px !important;
+        }
+
+        .flag {
+            width: 350px !important;
+        }
+    }
+
+    .projects--second {
+        .weStreet {
+            width: 350px !important;
+        }
+        .leheadiste {
+            width: 650px !important;
+            height: 375px !important;
+        }
+    }
+}
+
+@media (max-width: 1249px) {
+    .homePortfolio {
+        width: 70% !important;
+
+        .projects {
+            height: auto !important;
+        }
+    }
+    .projects--first {
+        flex-direction: column;
+
+        .bitcoin {
+            width: 100% !important;
+            height: 500px !important;
+        }
+
+        .flag {
+            width: 100% !important;
+            margin: 250px 0 0 0 !important;
+        }
+    }
+
+    .projects--second {
+        flex-direction: column;
+        margin: 200px 0 0 0;
+
+        .weStreet {
+            width: 100% !important;
+        }
+        .leheadiste {
+            width: 100% !important;
+            margin: 200px 0 0 0 !important;
+        }
+    }
+
+    .homePortfolio .projects--first .bitcoin .bitcoin-project img,
+    .homePortfolio .projects--first .flag .flag-project img,
+    .homePortfolio .projects--second .weStreet .weStreet-project img,
+    .homePortfolio .projects--second .leheadiste .leheadiste-project img {
+        width: 100% !important;
+        height: 500px !important;
+    }
+    .homePortfolio .projects--first .bitcoin .gatsby-image-wrapper,
+    .homePortfolio .projects--first .flag .gatsby-image-wrapper,
+    .homePortfolio .projects--second .weStreet .gatsby-image-wrapper,
+    .homePortfolio .projects--second .leheadiste .gatsby-image-wrapper {
+        width: 100% !important;
+        height: 500px !important;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .homePortfolio {
+        h3 {
+            font-size: 1.275rem !important;
+        }
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .homePortfolio {
+        h3 {
+            font-size: 1.175rem !important;
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .homePortfolio {
+        h3 {
+            font-size: 1.075rem !important;
         }
     }
 }

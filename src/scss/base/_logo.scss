@@ -13,3 +13,10 @@
         color: $black;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 100% !important;
+        height: 135px !important;
+    }
+}

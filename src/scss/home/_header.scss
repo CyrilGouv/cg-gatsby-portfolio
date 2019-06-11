@@ -302,3 +302,136 @@
         height: 0;
     }
 }
+
+
+/** +=RESPONSIVE **/
+@media (min-width: 1199px) and (max-width: 1449px) {
+    .banner {
+        .left-adj,
+        .nav::before,
+        .right-socials a {
+            font-size: 0.95rem !important;
+        }
+
+        .content {
+            h2 {
+                font-size: 3rem !important;
+            }
+
+            h1 {
+                font-size: 1.25rem !important;
+            }
+        }
+    }
+
+    .btn--contact {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+    .banner {
+        .left-adj,
+        .nav::before,
+        .right-socials a {
+            font-size: 0.90rem !important;
+        }
+
+        .content {
+            h2 {
+                font-size: 2.9rem !important;
+            }
+
+            h1 {
+                font-size: 1.15rem !important;
+                width: 75% !important;
+            }
+        }
+    }
+
+    .btn--contact {
+        font-size: 0.9rem !important;
+        padding: 1.75rem 1.2rem !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .banner {
+        .left-adj {
+            display: none !important;
+        }
+
+        .content {
+            h2 {
+                font-size: 2rem !important;
+                padding: 0 !important;
+            }
+
+            h1 {
+                width: 75% !important;
+                font-size: 1rem !important;
+                margin-top: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .contentTitle-bar {
+                width: 0 !important;
+            }
+        }
+    }
+
+    .btn--contact {
+        font-size: 0.85rem !important;
+        padding: 1.388rem 1.1rem !important;
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .banner {
+
+        &::after, &::before {
+            display: none !important;
+        }
+
+        .left {
+            justify-content: flex-end !important;
+            
+            .left-adj {
+                display: none !important;
+            }
+        }
+
+        .content {
+            h2 {
+                font-size: 1.85rem !important;
+                padding: 0 !important;
+            }
+
+            h1 {
+                width: 90% !important;
+                font-size: 1rem !important;
+                margin-top: 1.5rem !important;
+                margin-bottom: 1.5rem !important;
+            }
+
+            .contentTitle-bar {
+                width: 0 !important;
+            }
+        }
+    }
+
+    .btn--contact {
+        font-size: 0.8rem !important;
+        padding: 1.288rem 1rem !important;
+
+        img {
+            width: 1.1rem;
+        }
+    }
+}
+
+

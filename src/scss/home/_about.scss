@@ -100,3 +100,115 @@
         }
     }
 }
+
+@media (min-width: 1199px) and (max-width: 1449px) {
+    .homeAbout {
+        padding: 10rem 0 !important;
+
+        .homeAbout-blurb {
+            h4 {
+                font-size: 3rem !important;
+            }
+    
+            p {
+                font-size: 1.275rem !important;
+            }
+        }
+
+        .about-transform {
+            font-size: 3rem !important;
+        }
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .homeAbout {
+
+        .homeAbout-blurb {
+            h4 {
+                font-size: 2.8rem !important;
+            }
+    
+            p {
+                font-size: 1.175rem !important;
+            }
+        }
+
+        .about-transform {
+            font-size: 2.5rem !important;
+        }
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .homeAbout {
+
+        .homeAbout-blurb {
+            h4 {
+                font-size: 2.6rem !important;
+            }
+    
+            p {
+                font-size: 1.075rem !important;
+            }
+        }
+
+        .about-transform {
+            font-size: 2rem !important;
+        }
+
+        .homeAbout-img {
+            .homeAbout-img--proto {
+                transform: translateY(-150px) !important;
+            }
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .homeAbout {
+        .homeAbout-blurb {
+            h4 {
+                font-size: 2.4rem !important;
+            }
+    
+            p {
+                font-size: 0.975rem !important;
+            }
+        }
+
+        .about-transform {
+            font-size: 1.25rem !important;
+        }
+
+        .homeAbout-img {
+            .homeAbout-img--proto {
+                transform: translateY(-100px) !important;
+            }
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .homeAbout {
+        .homeAbout-blurb {
+            h4 {
+                font-size: 2.3rem !important;
+            }
+    
+            p {
+                font-size: 0.875rem !important;
+            }
+        }
+
+        .about-transform {
+            font-size: 1.5rem !important;
+        }
+    }
+}
