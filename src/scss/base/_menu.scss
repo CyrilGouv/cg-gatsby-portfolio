@@ -182,3 +182,67 @@
         }
     }
 }
+
+@media only screen and (max-width : 1200px) {
+    .menu-links {
+        ul {
+            li {
+                font-size: 3rem !important;
+
+                span {
+                    font-size: 0.8rem !important;
+                }
+            }
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .menu-links {
+        ul {
+            li {
+                font-size: 2.875rem !important;
+                padding: 1rem 0 !important;
+
+                span {
+                    font-size: 0.75rem !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+    .menu-links {
+        ul {
+            li {
+                font-size: 2.75rem !important;
+                padding: 0.875rem 0 !important;
+
+                span {
+                    font-size: 0.70rem !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .menu-links {
+        ul {
+            li {
+                font-size: 2.625rem !important;
+                padding: 0.75rem 0 !important;
+
+                span {
+                    font-size: 0.65rem !important;
+                }
+            }
+        }
+    }
+}
