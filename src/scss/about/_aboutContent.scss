@@ -358,6 +358,12 @@
                 flex-direction: column;
                 align-items: flex-start;
 
+                .who-socials {
+                    a {
+                        font-size: 0.9rem !important;
+                    }
+                }
+
                 .who-content-img {
                     width: 55%;
                 }
@@ -440,6 +446,12 @@
                     font-size: 0.825rem !important;
                 }
             }
+
+            .who-socials {
+                a {
+                    font-size: 0.8rem !important;
+                }
+            }
         }
 
         .what {
@@ -493,5 +505,15 @@
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-    
+    .aboutContent {
+        .who {
+            .who-content-img {
+                width: 100% !important;
+            }
+
+            .who-socials {
+                display: none !important;
+            }
+        }
+    }
 }

@@ -24,6 +24,7 @@
     p {
         font-weight: 300;
         padding-left: 2.5rem;
+        font-size: 1rem;
     }
 
     .nav {
@@ -297,5 +298,187 @@
 
     .gatsby-image-wrapper {
         width: 65%;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 1200px) {
+    .projectHeader {
+        .content {
+            h1 {
+                font-size: 2.9rem !important;
+            }
+
+            h2 {
+                font-size: 1.15rem !important;
+                width: 75% !important;
+            }
+        }
+    }
+
+    .singleProject-blurb {
+        p {
+            font-size: 1rem !important;
+        }
+    }
+
+    .singleProject-color-title {
+        font-size: 4rem !important;
+    }
+
+    .singleProject-color-pick {
+        div {
+            width: 10rem !important;
+            height: 10rem !important;
+        }
+
+        .pick-second {
+            margin: 0 1rem !important;
+        }
+
+        .pick-fourth {
+            margin: 0 1rem !important;
+        }
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    .projectHeader {
+        .content {
+            h1 {
+                font-size: 2rem !important;
+                padding: 0 !important;
+            }
+
+            h2 {
+                width: 75% !important;
+                font-size: 1rem !important;
+                margin-top: 1rem !important;
+                margin-bottom: .5rem !important;
+                padding: 0 !important;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 1rem;
+                padding: 0 !important;
+                margin: 0;
+            }
+
+            .contentTitle-bar {
+                width: 0 !important;
+            }
+        }
+    }
+
+    .singleProject-blurb {
+        p {
+            font-size: .9rem !important;
+        }
+    }
+
+    .singleProject-color-title {
+        font-size: 3rem !important;
+    }
+
+    .singleProject-color-pick {
+
+        div {
+            width: 8rem !important;
+            height: 8rem !important;
+        }
+
+        .pick-second {
+            margin: 0 .5rem !important;
+        }
+
+        .pick-fourth {
+            margin: 0 .5rem !important;
+        }
+    }
+
+    .projectOrdi {
+        .gatsby-image-wrapper {
+            width: 75% !important;
+        }
+    }
+}
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 768px) {
+    .projectHeader {
+        .content {
+            h1 {
+                font-size: 1.85rem !important;
+                padding: 0 !important;
+            }
+
+            h2 {
+                width: 90% !important;
+                font-size: 1rem !important;
+                margin-top: 1rem !important;
+                margin-bottom: .5rem !important;
+                padding: 0 !important;
+            }
+
+            p {
+                font-weight: 300;
+                font-size: 1rem;
+                padding: 0 !important;
+                margin: 0;
+            }
+
+            .contentTitle-bar {
+                width: 0 !important;
+            }
+        }
+    }
+
+    .singleProject-blurb {
+        flex-direction: column;
+
+        .singleProject-blurb-intro,
+        .singleProject-img {
+            width: 100% !important;
+        }
+
+        .singleProject-img {
+            margin-top: 3rem;
+        }
+    }
+
+    .singleProject-color {
+        display: none !important;
+    }
+
+    .projectOrdi {
+        .gatsby-image-wrapper {
+            width: 100% !important;
+        }
+    }
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width : 480px) {
+    .projectHeader {
+        .content {
+            h1 {
+                font-size: 1.45rem !important;
+            }
+
+            h2 {
+                width: 100% !important;
+                font-size: 0.8rem !important;
+                margin-top: .9rem !important;
+                margin-bottom: .45rem !important;
+            }
+
+            p {
+                font-size: .8rem !important;
+            }
+        }
     }
 }
