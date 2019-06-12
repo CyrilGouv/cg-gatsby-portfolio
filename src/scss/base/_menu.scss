@@ -9,6 +9,7 @@
     background-color: $black;
     display: grid;
     grid-template-columns: 15% 1fr 15%;
+    -webkit-backface-visibility: hidden;
 
     .left {
         display: flex;

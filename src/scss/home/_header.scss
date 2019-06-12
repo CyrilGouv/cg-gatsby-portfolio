@@ -457,6 +457,10 @@
                 margin-bottom: 1.25rem !important;
             }
         }
+
+        .right {
+            justify-content: flex-start !important;
+        }
     }
 
     .btn--contact {
@@ -464,7 +468,11 @@
         padding: 1.05rem 0.85rem !important;
 
         img {
-            width: 1.1rem;
+            width: 0.9rem;
+        }
+
+        .btn--contact-arrow {
+            margin-left: 0.65rem !important;
         }
     }
 }

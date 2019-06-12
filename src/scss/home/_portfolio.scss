@@ -267,3 +267,37 @@
         }
     }
 }
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 480px) {
+    .homePortfolio {
+        padding-bottom: 7rem !important;
+
+        .projects--first .bitcoin .gatsby-image-wrapper, .projects--first .flag .gatsby-image-wrapper, .projects--second .weStreet .gatsby-image-wrapper, .projects--second .leheadiste .gatsby-image-wrapper {
+            width: 100% !important;
+            height: 250px !important;
+        }
+
+        .projects--first {
+            .bitcoin,
+            .flag {
+                height: auto !important;
+            }
+
+            .flag {
+                margin-top: 5rem !important;
+            }
+        }
+
+        .projects--second {
+            margin-top: 0 !important;
+
+            .leheadiste,
+            .weStreet {
+                height: auto !important;
+                margin-top: 5rem !important;
+            }
+        }
+    }
+}
