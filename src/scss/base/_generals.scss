@@ -122,6 +122,10 @@ a {
     color: inherit;
 }
 
+.lock-scroll {
+    position: fixed !important;
+}
+
 
 /** +=RESPONSIVE **/
 @media (min-width: 1199px) and (max-width: 1449px) {

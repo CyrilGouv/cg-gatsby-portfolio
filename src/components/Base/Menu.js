@@ -39,6 +39,7 @@ export default class Menu extends Component {
             .set('.singleProjectContent', { zIndex: '-888', autoAlpha: 0 })
             .set('.gatsby-image-wrapper', { overflow: 'visible' })
             .set('.footer', { zIndex: '-888', autoAlpha: 0 })
+            .to(menu, 0.1, {css:{className:'+=lock-scroll'}})
             .to(menu, 1.25, { y: '100%', ease: Power4.easeOut })
             .staggerTo(menuLinksLi, 0.5, { autoAlpha: 1, transform: 'translateY(10%)', ease: Power1.easeOut }, 0.25)
     }
@@ -55,7 +56,8 @@ export default class Menu extends Component {
         this.setState({ menuOpen: false })
 
         closeTl
-            .staggerTo(menuLinksLiArrReverse, 0.5, { autoAlpha: 0, transform: 'translateY(-10%)', ease: Power1.easeOut }, 0.25)        
+            .staggerTo(menuLinksLiArrReverse, 0.5, { autoAlpha: 0, transform: 'translateY(-10%)', ease: Power1.easeOut }, 0.25)
+            .to(menu, 0.1, {css:{className:'-=lock-scroll'}})     
             .to(menu, 1.25, { y: '-100%', ease: Power4.easeOut })
             .set('.gatsby-image-wrapper', { overflow: 'hidden' })
             .set('.singleProjectContent', { zIndex: '1', autoAlpha: 1 })
