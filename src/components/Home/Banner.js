@@ -16,6 +16,7 @@ export default class Banner extends Component {
 
     componentDidMount = () => {
         this.initAnim()
+        this.setMenu()
     }
 
     initAnim = () => {
@@ -36,6 +37,14 @@ export default class Banner extends Component {
             .from('.btn', 1, { autoAlpha: 0, y: 30, ease: Power1.easeOut })
             .from('.btn', .5, { paddingLeft: 0, ease: Power1.easeOut })
             .from(rule, .5, { cssRule: { width: 0 }, ease: Power1.easeOut }, '-=0.5')
+    }
+
+    setMenu = () => {
+        const menuTl = new TimelineLite()
+
+        menuTl
+            .set('.menu', { y: '-100%' })
+            .to('body', 0.1, {css:{className:'-=lock-scroll'}})
     }
 
 

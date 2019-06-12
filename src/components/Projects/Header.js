@@ -11,6 +11,7 @@ export default class Header extends Component {
 
     componentDidMount = () => {
         this.animHeader()
+        this.setMenu()
     }
 
     animHeader = () => {
@@ -26,6 +27,14 @@ export default class Header extends Component {
             .from(titleSec, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
             .from(titleThird, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
             .from(titleFourth, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
+    }
+
+    setMenu = () => {
+        const menuTl = new TimelineLite()
+
+        menuTl
+            .set('.menu', { y: '-100%' })
+            .to('body', 0.1, {css:{className:'-=lock-scroll'}})
     }
 
     handleMenu = () => {

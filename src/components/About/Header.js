@@ -11,6 +11,8 @@ export default class Header extends Component {
 
     componentDidMount = () => {
         this.animHeader()
+
+        this.setMenu()
     }
 
     animHeader = () => {
@@ -30,6 +32,14 @@ export default class Header extends Component {
 
     handleMenu = () => {
         this.setState({ menuOpen: !this.state.menuOpen })
+    }
+
+    setMenu = () => {
+        const menuTl = new TimelineLite()
+
+        menuTl
+            .set('.menu', { y: '-100%' })
+            .to('body', 0.1, {css:{className:'-=lock-scroll'}})
     }
 
     render() {
