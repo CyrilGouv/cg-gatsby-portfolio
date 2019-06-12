@@ -12,6 +12,7 @@ export default class BackgroundSection extends Component {
 
     componentDidMount = () => {
         this.initAnim()
+        this.setMenu()
     }
 
     initAnim = () => {
@@ -27,6 +28,14 @@ export default class BackgroundSection extends Component {
             .from(h1TitleFirst, .85, { autoAlpha: 0, transform: "translateY(100%)", ease: Power1.easeOut })
             .from(h2Title, .85, { autoAlpha: 0, transform: "translateY(100%)", ease: Power2.easeOut }, '-=0.20')
             .from(subtitle, .85, { autoAlpha: 0, transform: "translateY(100%)", ease: Power2.easeOut }, '-=0.50')
+    }
+
+    setMenu = () => {
+        const menuTl = new TimelineLite()
+
+        menuTl
+            .set('.menu', { y: '-100%' })
+            .to('body', 0.1, {css:{className:'-=lock-scroll'}})
     }
 
 

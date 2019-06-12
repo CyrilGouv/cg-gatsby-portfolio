@@ -11,7 +11,6 @@ export default class ProjectContent extends Component {
 
     componentDidMount = () => {
         this.initAnim()
-        this.setMenu()
     }
 
     initAnim = () => {
@@ -54,14 +53,6 @@ export default class ProjectContent extends Component {
         )
         .addTo(controller)
         
-    }
-
-    setMenu = () => {
-        const menuTl = new TimelineLite()
-
-        menuTl
-            .set('.menu', { y: '-100%' })
-            .to('body', 0.1, {css:{className:'-=lock-scroll'}})
     }
 
     render() {

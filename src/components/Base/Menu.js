@@ -40,7 +40,7 @@ export default class Menu extends Component {
             .set('.gatsby-image-wrapper', { overflow: 'visible' })
             .set('.footer', { zIndex: '-888', autoAlpha: 0 })
             .to('body', 0.1, {css:{className:'+=lock-scroll'}})
-            .to(menu, 1.25, { y: '100%', ease: Power4.easeOut })
+            .to(menu, 1.25, { yPercent: 100, ease: Power4.easeOut })
             .staggerTo(menuLinksLi, 0.5, { autoAlpha: 1, transform: 'translateY(10%)', ease: Power1.easeOut }, 0.25)
     }
 

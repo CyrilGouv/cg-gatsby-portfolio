@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
 import ScrollMagic from '../Base/ScrollMagic'
 
-import arrowBlack from '../../images/base/arrow-black.svg'
 import arrowWhite from '../../images/base/arrow-white.svg'
 
 
