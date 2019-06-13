@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import Tilt from 'react-tilt'
-import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
+import { TimelineLite, Power1, Power2, TweenLite } from "gsap/TweenMax";
 import ScrollMagic from '../Base/ScrollMagic'
 import { FaCircle } from 'react-icons/fa';
 
@@ -10,8 +10,18 @@ import arrowBlack from '../../images/base/arrow-black.svg'
 
 
 export default class ContactContent extends Component {
+    state = {
+        name: '',
+        email: '',
+        message: ''
+    }
+
     componentDidMount = () => {
         this.animWhat()
+    }
+
+    componentDidUpdate = () => {
+        this.hasValue()
     }
 
     animWhat = () => {
@@ -51,6 +61,30 @@ export default class ContactContent extends Component {
                 .staggerFrom(form, .5, { autoAlpha: 0, y: 30, ease: Power1.easeOut }, .25)
         )
         .addTo(controller)
+    }
+
+    hasValue = () => {
+        const name = this.state.name
+        const email = this.state.email
+        const message = this.state.message
+
+        if (name === '') {
+            TweenLite.to(this.refs.name, 0.1, { css:{ className: '-=hasValue' } })
+        } else {
+            TweenLite.to(this.refs.name, 0.1, { css:{ className: '+=hasValue' } })
+        }
+
+        if (email === '') {
+            TweenLite.to(this.refs.email, 0.1, { css:{ className: '-=hasValue' } })
+        } else {
+            TweenLite.to(this.refs.email, 0.1, { css:{ className: '+=hasValue' } })
+        }
+
+        if (message === '') {
+            TweenLite.to(this.refs.message, 0.1, { css:{ className: '-=hasValue' } })
+        } else {
+            TweenLite.to(this.refs.message, 0.1, { css:{ className: '+=hasValue' } })
+        }
     }
 
     render() {
@@ -101,15 +135,15 @@ export default class ContactContent extends Component {
                 <div className="contactContent-form">
                     <form action="" ref="form">
                         <div className="form-group">
-                            <input type="text" name="name" id="name" className="name" />
+                            <input ref="name" type="text" name="name" id="name" className="name" onChange={ (e) => this.setState({ name: e.target.value }) } />
                             <label htmlFor="name">Votre nom</label>
                         </div>
                         <div className="form-group">
-                            <input type="email" name="email" id="name" className="email" />
+                            <input ref="email" type="email" name="email" id="name" className="email" onChange={ (e) => this.setState({ email: e.target.value }) }  />
                             <label htmlFor="name">Votre email</label>
                         </div>
                         <div className="form-group">
-                            <textarea name="message" id="message" className="message"></textarea>
+                            <textarea ref="message" name="message" id="message" className="message" onChange={ (e) => this.setState({ message: e.target.value }) } ></textarea>
                             <label htmlFor="message">Votre message</label>
                         </div>
                         <a className="btn--default">

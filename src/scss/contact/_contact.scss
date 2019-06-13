@@ -212,13 +212,36 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 480px) {
     .contactContent {
+        .contactContent-maps {
+            height: 250px !important;
+
+            .gatsby-image-wrapper {
+                height: 250px !important;
+            }
+
+            .maps-logo {
+                font-size: .8rem !important;
+            }
+        }
+
         .contactContent-infos {
             p {
-                font-size: 0.975rem !important;
+                font-size: 0.85rem !important;
+            }
+
+            h4 {
+                font-size: 0.95rem !important;
+                letter-spacing: 2px !important;
             }
 
             .infos-disponibility {
                 margin: 2.05rem 0;
+            }
+        }
+
+        .contactContent-form {
+            .name, .email, .message, label {
+                font-size: 0.75rem !important;
             }
         }
     }
