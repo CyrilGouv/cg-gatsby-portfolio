@@ -75,9 +75,9 @@ export default class ContactContent extends Component {
         }
 
         if (email === '') {
-            TweenLite.to(this.refs.email, 0.1, { css:{ className: '-=hasValue' } })
+            TweenLite.to(this.refs.emailForm, 0.1, { css:{ className: '-=hasValue' } })
         } else {
-            TweenLite.to(this.refs.email, 0.1, { css:{ className: '+=hasValue' } })
+            TweenLite.to(this.refs.emailForm, 0.1, { css:{ className: '+=hasValue' } })
         }
 
         if (message === '') {
@@ -139,7 +139,7 @@ export default class ContactContent extends Component {
                             <label htmlFor="name">Votre nom</label>
                         </div>
                         <div className="form-group">
-                            <input ref="email" type="email" name="email" id="name" className="email" onChange={ (e) => this.setState({ email: e.target.value }) }  />
+                            <input ref="emailForm" type="email" name="email" id="name" className="email" onChange={ (e) => this.setState({ email: e.target.value }) }  />
                             <label htmlFor="name">Votre email</label>
                         </div>
                         <div className="form-group">
