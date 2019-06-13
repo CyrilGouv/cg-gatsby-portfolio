@@ -146,7 +146,7 @@ export default class ContactContent extends Component {
                             <textarea ref="message" name="message" id="message" className="message" onChange={ (e) => this.setState({ message: e.target.value }) } ></textarea>
                             <label htmlFor="message">Votre message</label>
                         </div>
-                        <button className="btn--default" href="#">
+                        <button type="submit" className="btn--default" href="#">
                             Envoyer
                             <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
                         </button>
