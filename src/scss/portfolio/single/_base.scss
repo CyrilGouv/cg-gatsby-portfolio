@@ -270,6 +270,10 @@
     }
 }
 
+.gatsby-background-image-kygjweq_depr.gatsby-image-wrapper {
+    height: 100% !important;
+}
+
 .singleProject-color {
     position: relative;
     overflow: hidden;
@@ -480,5 +484,21 @@
                 font-size: .8rem !important;
             }
         }
+    }
+
+    .singleProjectContent {
+        padding: 7rem 0 !important;
+    }
+
+    .singleProject-img {
+        height: 265px !important;
+    
+        .gatsby-image-wrapper {
+            width: 130px !important;
+        }
+    }
+
+    .projectOrdi {
+        padding-top: 5rem !important;
     }
 }
