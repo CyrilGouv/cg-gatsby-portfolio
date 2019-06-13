@@ -20,7 +20,8 @@ export default class Loading extends Component {
         return (
             <div className="loading" ref="loading">
                 <div className="loading-logo">
-                    Cg.
+                    <span>C</span>
+                    <span>G</span>
                 </div>
             </div>
         )

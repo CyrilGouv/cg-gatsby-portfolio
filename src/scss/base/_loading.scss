@@ -19,6 +19,17 @@
         position: relative;
         font-family: $secondaryFont;
         display: inline-block;
+        padding-right: .55rem;
+        padding-left: .55rem;
+
+        span {
+            display: inline-block;
+            animation: pulse .4s alternate infinite ease-in-out;
+
+            &:nth-child(odd) {
+                animation-delay: .4s;
+            }
+        }
 
         &::after {
             position: absolute;
@@ -28,7 +39,8 @@
             height: 3px;
             background-color: $black;
             bottom: -.75rem;
-            left: auto;
+            left: 0;
+            right: 0;
             animation: 1.8s loadingLogo linear;
         }
     }
@@ -45,5 +57,49 @@
 
     100% {
         width: 100%;
+    }
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(.8);
+        opacity: 0.5;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .loading {
+        font-size: 2.5rem !important;
+
+        .loading-logo {
+            padding-right: .5rem;
+            padding-left: .5rem;
+
+            &::after {
+                height: 2px !important;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .loading {
+        font-size: 2rem !important;
+
+        .loading-logo {
+            padding-right: .5rem;
+            padding-left: .5rem;
+
+            &::after {
+                height: 2px !important;
+                left: 0;
+                right: 0;
+            }
+        }
     }
 }
