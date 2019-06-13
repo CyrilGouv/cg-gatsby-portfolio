@@ -87,6 +87,11 @@ export default class ContactContent extends Component {
         }
     }
 
+    handleForm = () => {
+        this.refs.form.submit()
+        return false
+    }
+
     render() {
         return (
             <section className="contactContent" ref="contact">
@@ -146,7 +151,7 @@ export default class ContactContent extends Component {
                             <textarea ref="message" name="message" id="message" className="message" onChange={ (e) => this.setState({ message: e.target.value }) } ></textarea>
                             <label htmlFor="message">Votre message</label>
                         </div>
-                        <a className="btn--default">
+                        <a className="btn--default" href="#" onClick={ this.handleForm() }>
                             Envoyer
                             <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
                         </a>
