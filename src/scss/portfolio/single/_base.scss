@@ -270,8 +270,16 @@
     }
 }
 
-.gatsby-background-image-kygjweq_depr.gatsby-image-wrapper {
-    height: 100% !important;
+.gatsby-background-image-kygjweq_depr {
+    height: 70vh !important;
+
+    &::after {
+        height: 70vh !important;
+    }
+
+    &::before {
+        height: 70vh !important;
+    }
 }
 
 .singleProject-color {

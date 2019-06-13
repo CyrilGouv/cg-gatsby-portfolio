@@ -128,6 +128,10 @@ a {
     height: 100vh !important;
 }
 
+.txt-yellow {
+    color: $yellow;
+}
+
 
 /** +=RESPONSIVE **/
 @media (min-width: 1199px) and (max-width: 1449px) {
