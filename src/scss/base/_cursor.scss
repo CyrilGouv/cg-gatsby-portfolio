@@ -23,3 +23,9 @@
         transform: scale(.15);
     }
 }
+
+@media only screen and (max-width : 768px) {
+    .cursor {
+        display: none !important;
+    }
+}
