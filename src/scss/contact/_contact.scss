@@ -75,6 +75,11 @@
         form {
             width: 80%;
             margin: 0 auto;
+
+            .btn--default {
+                border: none;
+                outline: none;
+            }
         }
 
         .name, .email, .message {
