@@ -16,7 +16,22 @@
 
 @media screen and (max-width: 768px) {
     .logo {
+        width: 80% !important;
+        height: 100px !important;
+
+        a {
+            font-size: 1.35rem !important;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
         width: 100% !important;
-        height: 135px !important;
+        height: 90px !important;
+
+        a {
+            font-size: 1.25rem;
+        }
     }
 }

@@ -158,6 +158,10 @@
         .content {
             h1 {
                 font-size: 1.875rem !important;
+
+                &:first-of-type {
+                    margin-top: 3rem;
+                }
             }
         }
     }
@@ -168,7 +172,29 @@
     .aboutHeader {
         .content {
             h1 {
-                font-size: 1.45rem !important;
+                font-size: 1.35rem !important;
+
+                &:first-of-type {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        .right {
+            .right-socials {
+                display: none !important;
+            }
+
+            .nav {
+                height: 100px !important;
+
+                &::before {
+                    font-size: 0.9rem !important;
+                }
+
+                button {
+                    width: 32px !important;
+                }
             }
         }
     }
@@ -185,6 +211,26 @@
                 line-height: 1.5rem;
                 letter-spacing: 1px !important;
                 text-align: justify;
+
+                &:first-of-type {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        .right {
+            justify-content: flex-start !important;
+
+            .nav {
+                height: 90px !important;
+
+                &::before {
+                    font-size: 0.8rem !important;
+                }
+
+                button {
+                    width: 30px !important;
+                }
             }
         }
     }

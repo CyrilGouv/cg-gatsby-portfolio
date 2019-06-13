@@ -384,6 +384,9 @@
         }
 
         .what {
+            margin-top: -8rem;
+            margin-bottom: 7rem !important;
+
             .what-blurb {
                 h2 {
                     font-size: 1.175rem !important;
@@ -400,6 +403,7 @@
         }
 
         .love {
+
             .love-blurb {
                 h2 {
                     font-size: 1.175rem !important;
@@ -416,6 +420,10 @@
             }
             .love-img--center {
                 width: 55% !important;
+            }
+
+            .love-img-content {
+                margin-bottom: 0 !important;
             }
         }
     }
@@ -435,7 +443,7 @@
 
                 .who-content-desc {
                     width: 100%;
-                    margin-top: 5rem;
+                    margin-top: 4rem;
                 }
 
                 h2 {
@@ -448,13 +456,14 @@
             }
 
             .who-socials {
-                a {
-                    font-size: 0.8rem !important;
-                }
+                display: none !important;
             }
         }
 
         .what {
+            margin-top: -8rem;
+            margin-bottom: 6rem !important;
+
             .what-blurb {
                 h2 {
                     font-size: 1.075rem !important;
@@ -470,7 +479,7 @@
 
                 .what-img--left {
                     width: 100% !important;
-                    height: 450px !important;
+                    height: 350px !important;
                 }
 
                 .what-img--right {
@@ -484,7 +493,7 @@
         }
 
         .love {
-            padding-bottom: 12rem;
+            padding-bottom: 8rem;
 
             .love-blurb {
                 h2 {
@@ -511,9 +520,34 @@
                 width: 100% !important;
             }
 
+            .who-content-desc {
+                margin-top: 3rem !important;
+            }
+
             .who-socials {
                 display: none !important;
             }
+        }
+
+        .what {
+            margin-top: -8rem;
+            margin-bottom: 5rem !important;
+
+            .what-img {
+                height: 300px !important;
+            }
+
+            .what-img--left {
+                height: 300px !important;
+
+                .gatsby-image-wrapper {
+                    height: 300px !important;
+                }
+            }
+        }
+
+        .love {
+            padding-bottom: 7rem !important;
         }
     }
 }

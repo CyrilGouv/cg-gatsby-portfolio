@@ -11,6 +11,7 @@ body, html {
 body {
     font-family: $primaryFont, 'Open Sans', 'Verdana', 'sans-serif';
     letter-spacing: 2px;
+    cursor: none;
 }
 
 * {
@@ -154,11 +155,15 @@ a {
     .btn,
     .btn--default {
         font-size: 0.75rem !important;
-        padding: 0.9rem 1rem !important;
+        padding: 0.7rem 1rem !important;
 
         img {
             width: 1.1rem !important;
         }
+    }
+
+    body {
+        cursor: auto !important;
     }
 }
 
