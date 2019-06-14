@@ -94,7 +94,7 @@
             .contentTitle-bar {
                 display: inline-block;
                 width: 2px;
-                height: 100%;
+                height: auto;
                 background-color: $white;
                 transform-origin: 0% 0%;
             }
@@ -463,6 +463,7 @@
             h2 {
                 font-size: 1.45rem !important;
                 line-height: 1.2 !important;
+                letter-spacing: 1px !important;
             }
 
             h1 {
@@ -470,7 +471,7 @@
                 font-size: 0.8rem !important;
                 margin-top: 1.25rem !important;
                 margin-bottom: 1.25rem !important;
-                line-height: 1.1rem !important;
+                line-height: 1.2rem !important;
                 font-family: $primaryFont !important;
             }
         }

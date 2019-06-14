@@ -115,6 +115,11 @@
                 cursor: pointer;
                 overflow: hidden;
 
+                @-moz-document url-prefix() {
+                    height: auto;
+                    overflow: visible;
+                }  
+
                 span.nav--bar {
                     position: relative;
                     top: 50%;
@@ -287,5 +292,13 @@
                 }
             }
         }
+    }
+}
+
+
+@media screen and (-moz-min-device-pixel-ratio:0) {
+    button.close {
+        height: auto !important;
+        overflow: visible;
     }
 }

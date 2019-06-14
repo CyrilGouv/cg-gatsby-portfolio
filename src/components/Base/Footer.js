@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'gatsby'
 import { FaHeart } from 'react-icons/fa';
 import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
 import ScrollMagic from '../Base/ScrollMagic'
@@ -79,6 +80,7 @@ export default class Footer extends Component {
     
                     <p className="copyright" ref="footerCopy">
                         Made with <FaHeart className="copyright-heart" /> by <a href="mailto:contact@cyrilgouverneur.com" target="_blank" rel="noreferrer noopener">Cyril Gouverneur</a>
+                        <Link className="copyright-mentions" to="/mentions-legales">Mentions Légales</Link>
                     </p>
                 </div>
             </div>

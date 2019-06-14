@@ -133,7 +133,7 @@ export default class ContactContent extends Component {
                 </div>
 
                 <div className="contactContent-form">
-                    <form action="https://formspree.io/contact@cyrilgouverneur.com" ref="form" method="POST">
+                    <form  method="POST" action="https://formspree.io/contact@cyrilgouverneur.com" ref="form">
                         <div className="form-group">
                             <input ref="name" type="text" name="name" id="name" className="name" onChange={ (e) => this.setState({ name: e.target.value }) } />
                             <label htmlFor="name">Votre nom</label>
