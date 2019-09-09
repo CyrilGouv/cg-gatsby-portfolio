@@ -5,9 +5,11 @@ import Header from "./Home/header"
 import Footer from "./Base/Footer"
 import Cursor from '../components/Base/Cursor'
 import "../scss/main.scss"
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 
 const Layout = ({ children }) => (
+  <ParallaxProvider>
   <React.Fragment>
     <Cursor />
     <Header />
@@ -16,6 +18,7 @@ const Layout = ({ children }) => (
     </main>
     <Footer />
   </React.Fragment>
+  </ParallaxProvider>
 )
 
 Layout.propTypes = {

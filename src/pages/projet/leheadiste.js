@@ -9,7 +9,7 @@ import ProjectContent from '../../components/Projects/Single/Leheadiste/ProjectC
 
 const Leheadiste = ({ data }) => (
   <Layout>
-    <SEO title="Le Headiste" />
+    <SEO lang="fr" title="Le Headiste" />
     <BackgroundSection 
         img={ data.leHeadiste.childImageSharp.fluid }
         title="Le Headiste"

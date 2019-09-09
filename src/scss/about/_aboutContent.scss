@@ -1,16 +1,21 @@
 .aboutContent {
+
     .who {
-        display: grid;
-        grid-template-columns: 15% 1fr 15%;
-        width: 100%;
+        // display: grid;
+        // grid-template-columns: 15% 1fr 15%;
+        // width: 100%;
+        background: linear-gradient($white 25vh, $lightGray 25vh, $lightGray 100%);
 
         .who-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: flex-end;
+            width: 70%;
+            margin: 0 auto;
+            color: $white;
 
             .who-content-img {
-                width: 45%;
+                width: 100%;
 
                 figure {
                     position: relative;
@@ -31,13 +36,17 @@
             }
 
             .who-content-desc {
-                width: 50%;
+                width: 100%;
+                padding: 5rem 0 10rem 0;
+                display: flex;
+                align-items: center;
 
                 h2 {
                     font-size: 1.375rem;
                     font-weight: 700;
                     margin-bottom: 1.75rem;
                     overflow: hidden;
+                    color: $black;
 
                     span {
                         display: inline-block;
@@ -54,41 +63,16 @@
                         font-weight: 400;
                     }
                 }
-            }
-        }
 
-        .who-socials {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            
-            .who-socials-right {
-                position: absolute;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                top: 50%;
-                left: 50%;
-                transform: translate3d(-50%, -50%, 0) rotate(90deg);
-
-                span {
-                    width: 44px;
-                    height: 1px;
-                    background-color: $black;
-                    margin: 0 1rem;
+                .who-desc--p {
+                    width: 50%;
                 }
-    
-                a {
-                    font-size: 1rem;
-                    color: $black;
-                    font-weight: 400;
-                    letter-spacing: 2px;
-                    text-decoration: none;
-                    transition: .35s;
-    
-                    &:hover {
-                        color: $brown;
-                    }
+            
+                .who-desc--map {
+                    background: url(../images/about/map-france.svg) no-repeat center center;
+                    width: 50%;
+                    height: 300px;
+                    background-size: contain;
                 }
             }
         }
@@ -105,6 +89,7 @@
             font-size: 1.375rem;
             font-weight: 700;
             margin-bottom: 1.75rem;
+            color: $black;
 
             overflow: hidden;
 
@@ -185,7 +170,8 @@
     }
 
     .love {
-        margin: 0 15%;
+        padding: 14rem 15% .2rem;
+        background-color: $lightGray;
 
         h2 {
             font-size: 1.375rem;
@@ -228,7 +214,7 @@
                     left: 0;
                     width: 100%;
                     height: 100%;
-                    background-color: $white;
+                    background-color: $lightGray;
                 }
             }
 
@@ -364,13 +350,22 @@
                     }
                 }
 
-                .who-content-img {
-                    width: 55%;
-                }
 
                 .who-content-desc {
                     width: 100%;
-                    margin-top: 5rem;
+                    margin-top: 0rem !important;
+                    padding-bottom: 6rem !important;
+
+                    flex-direction: column;
+                    align-items: flex-start !important;
+
+                    .who-desc--p {
+                        width: 100% !important;
+                    }
+
+                    .who-desc--map {
+                        margin-top: 5rem !important;
+                    }
                 }
 
                 h2 {
@@ -438,12 +433,21 @@
                 align-items: flex-start;
 
                 .who-content-img {
-                    width: 65%;
+                    height: 300px !important;
+
+                    .gatsby-image-wrapper {
+                        height: 300px !important;
+                    }
                 }
 
                 .who-content-desc {
                     width: 100%;
-                    margin-top: 4rem;
+                    margin-top: 0rem !important;
+                    padding-bottom: 4rem !important;
+
+                    .who-desc--map {
+                        margin-top: 0 !important;
+                    }
                 }
 
                 h2 {
@@ -453,10 +457,6 @@
                 p {
                     font-size: 0.825rem !important;
                 }
-            }
-
-            .who-socials {
-                display: none !important;
             }
         }
 
@@ -493,7 +493,8 @@
         }
 
         .love {
-            padding-bottom: 8rem;
+            padding-top: 5rem !important;
+            padding-bottom: 5rem !important;
 
             .love-blurb {
                 h2 {

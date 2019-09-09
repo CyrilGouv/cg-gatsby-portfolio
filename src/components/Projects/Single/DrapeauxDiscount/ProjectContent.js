@@ -36,8 +36,6 @@ export default class ProjectContent extends Component {
         const colorTl = new TimelineLite()
 
         const color = this.refs.color
-        const colorTitle = this.refs.colorTitle
-        const colorBox = this.refs.colorBox.children
         const projectOrdiReveal = this.refs.projectOrdiReveal
 
         new ScrollMagic.Scene({
@@ -48,8 +46,6 @@ export default class ProjectContent extends Component {
         .setTween(
             colorTl
                 .from('.singleProject-color--mask', 1.25, { transform: 'translateY(100%)', ease: Power2.easeOut })
-                .from(colorTitle, .85 , { autoAlpha: 0, transform: 'translateY: 100%', ease: Power2.easeOut}, '-=.25')
-                .staggerFrom(colorBox, .85 , { autoAlpha: 0, transform: 'translateY: 100%', ease: Power2.easeOut}, .25)
                 .from(projectOrdiReveal, .85 , { autoAlpha: 0, transform: 'translateY: 100%', ease: Power2.easeOut}, '-=.25')
         )
         .addTo(controller)
@@ -86,26 +82,6 @@ export default class ProjectContent extends Component {
                                 )
                             } }
                         />
-                    </div>
-                </div>
-                <div className="singleProject-color" ref="color">
-                    <div className="singleProject-color--mask"></div>
-                    <div className="singleProject-color-title">
-                        <p ref="colorTitle">COULEURS</p>
-                    </div>
-                    <div className="singleProject-color-pick drapeauxDiscountSingle-pick" ref="colorBox">
-                        <div className="pick-first">
-                            <p className="pick-color-first">#e8973d</p>
-                        </div>
-                        <div className="pick-second">
-                            <p className="pick-color-second">#333333</p>
-                        </div>
-                        <div className="pick-third">
-                            <p className="pick-color-third">#000000</p>
-                        </div>
-                        <div className="pick-fourth">
-                            <p className="pick-color-fourth">#ffffff</p>
-                        </div>
                     </div>
                 </div>
                 <div ref="projectOrdiReveal">

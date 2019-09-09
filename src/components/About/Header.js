@@ -21,13 +21,11 @@ export default class Header extends Component {
         const titleFirst = this.refs.titleFirst
         const titleSec = this.refs.titleSec
         const titleThird = this.refs.titleThird
-        const titleFourth = this.refs.titleFourth
 
         titleTl
             .from(titleFirst, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut })
             .from(titleSec, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
             .from(titleThird, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
-            .from(titleFourth, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
     }
 
     handleMenu = () => {
@@ -50,24 +48,22 @@ export default class Header extends Component {
                     <Logo />
                 </div>
                 <div className="content">
+                    <p>
+                        Cyril Gouverneur
+                    </p>
                     <h1>
                         <span ref="titleFirst">
-                            Développeur web freelance
+                            Web Designer
                         </span>
                     </h1>
                     <h1>
                         <span ref="titleSec">
-                            spécialisé en création de site
+                            Développeur Front-End
                         </span>
                     </h1>
                     <h1>
                         <span ref="titleThird">
-                            vitrine basé à Biscarrosse dans
-                        </span>
-                    </h1>
-                    <h1>
-                        <span ref="titleFourth">
-                            les Landes.
+                            & Intégrateur Web Freelance.
                         </span>
                     </h1>
                 </div>

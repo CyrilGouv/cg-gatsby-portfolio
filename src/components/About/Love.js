@@ -44,11 +44,7 @@ export default class Love extends Component {
                     <div className="love-desc" ref="loveDesc">
                         <p>
                             En dehors de ma vie professionnel, j'aime passer du temps avec ma petite famille et voyager.
-                            Sportif depuis toujours, j'aime également m'évader l'esprit en pleine nature en faisant du vélo, de la course à pied ou soulever un peu de fonte.
-                        </p>
-                        <p>
-                            Une fois à la maison, je passe mon temps à regarder du sport tels que du cyclisme et de la NBA ou à regarder des séries avec ma femme.
-                            Joueur de poker depuis 2007, je ne dis jamais non lorsque j'ai le temps à jouer des Sit&Go's et des tournois online.
+                            Sportif depuis toujours, j'aime également m'évader l'esprit en pleine nature que ce soit en faisant du vélo, de la course à pied ou aller nager.
                         </p>
                     </div>
                 </div>
@@ -57,14 +53,14 @@ export default class Love extends Component {
                         query={ Image }
                         render={ data => {
 
-                            const poker = data.poker.childImageSharp.fluid
+                            const swim = data.swim.childImageSharp.fluid
                             const voyage = data.voyage.childImageSharp.fluid
                             const sport = data.sport.childImageSharp.fluid
 
                             return (
                                 <div className="love-img-content">
                                     <figure className="love-img--left">
-                                        <Img fluid={ poker } />
+                                        <Img fluid={ swim } />
                                         <div className="reveal-love--mask"></div>
                                     </figure>
                                     <figure className="love-img--center">
@@ -88,7 +84,7 @@ export default class Love extends Component {
 
 const Image = graphql`
     {
-        poker:file(relativePath:{eq: "about/poker.jpg"}) {
+        swim:file(relativePath:{eq: "about/swim.jpg"}) {
             childImageSharp {
                 fluid(maxHeight: 350) {
                     ...GatsbyImageSharpFluid_tracedSVG

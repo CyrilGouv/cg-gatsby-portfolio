@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 5px;
 }
 
+p {
+    color: $lightBlack;
+}
+
 a {
     display: inline-block;
 
@@ -132,6 +136,9 @@ a {
     color: $yellow;
 }
 
+// .txt-brown {
+//     color: $brown;
+// }
 
 /** +=RESPONSIVE **/
 @media (min-width: 1199px) and (max-width: 1449px) {

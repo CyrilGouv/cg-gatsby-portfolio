@@ -1,5 +1,5 @@
 .homeAbout {
-    padding: 12rem 0;
+    padding: 12rem 0 0 0;
 
     .homeAbout-blurb {
         margin: 0 15%;
@@ -22,6 +22,49 @@
             font-size: 1.375rem;
             color: $lightBlack;
             width: 90%;
+
+            margin: 3rem 0 0 0;
+        }
+
+        .homeAbout-lists {
+            display: flex;
+            justify-content: space-between;
+            margin: 3.75rem 0 3.75rem 0;
+            color: $lightBlack;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    list-style: none;
+                    font-size: 1.125rem;
+                    padding: .25rem 0;
+
+                    span {
+                        font-size: 1.375rem;
+                        font-weight: 500;
+                        color: $black;
+                        display: block;
+                        padding: 0.4rem 0;
+                    }
+
+                    svg {
+                        width: 2.5rem;
+                        height: auto;
+
+                        &.designIcon,
+                        &.devIcon,
+                        &.optimizeIcon {
+                            width: 5rem;
+                            height: 80px;
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -70,40 +113,40 @@
         }
     }
 
-    .about-transform {
-        margin: 0 15%;
+    // .about-transform {
+    //     margin: 0 15%;
 
-        font-size: 3.125rem;
-        font-weight: 400;
-        color: $black;
+    //     font-size: 3.125rem;
+    //     font-weight: 400;
+    //     color: $black;
 
-        p {
-            overflow: hidden;
-            margin: 0;
-            padding: 0;
+    //     p {
+    //         overflow: hidden;
+    //         margin: 0;
+    //         padding: 0;
             
-            span {
-                display: inline-block;
-                transform: translateY(0);
-            }
-        }
+    //         span {
+    //             display: inline-block;
+    //             transform: translateY(0);
+    //         }
+    //     }
 
-        a {
-            display: inline-block;
-            color: $black;
-            transition: .35s ease-in;
+    //     a {
+    //         display: inline-block;
+    //         color: $black;
+    //         transition: .35s ease-in;
 
-            &:hover {
-                color: $brown;
-                text-decoration: underline;
-            }
-        }
-    }
+    //         &:hover {
+    //             color: $blue;
+    //             text-decoration: underline;
+    //         }
+    //     }
+    // }
 }
 
 @media (min-width: 1199px) and (max-width: 1449px) {
     .homeAbout {
-        padding: 10rem 0 !important;
+        padding: 10rem 0 0 0 !important;
 
         .homeAbout-blurb {
             h4 {
@@ -160,6 +203,27 @@
             font-size: 2rem !important;
         }
 
+        .homeAbout-lists {
+            flex-direction: column;
+            margin: 2.75rem 0 !important;
+
+            ul {
+                width: 50% !important;
+
+                &.homeAbout-dev {
+                    margin: 2.75rem 0;
+                }
+
+                li {
+                    font-size: 1.025rem !important;
+
+                    span {
+                        font-size: 1.275rem !important;
+                    }
+                }
+            }
+        }
+
         .homeAbout-img {
             .homeAbout-img--proto {
                 transform: translateY(-150px) !important;
@@ -176,11 +240,21 @@
 
         .homeAbout-blurb {
             h4 {
-                font-size: 2.4rem !important;
+                font-size: 1.65rem !important;
             }
     
             p {
                 font-size: 0.975rem !important;
+            }
+        }
+
+        .homeAbout-lists {
+            li {
+                font-size: 1.025rem !important;
+
+                span {
+                    font-size: 1.175rem !important;
+                }
             }
         }
 
@@ -209,6 +283,16 @@
     
             p {
                 font-size: 0.875rem !important;
+            }
+        }
+
+        .homeAbout-lists {
+            li {
+                font-size: 0.925rem !important;
+
+                span {
+                    font-size: 1.075rem !important;
+                }
             }
         }
 

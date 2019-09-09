@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import { TimelineLite, Power1, Power2 } from "gsap/TweenMax";
 import ScrollMagic from '../Base/ScrollMagic'
 
+
 export default class What extends Component {
 
     componentDidMount = () => {
@@ -48,7 +49,7 @@ export default class What extends Component {
                             Je place toujours l'expérience de l'utilisateur au coeur de la conception d'un site web en réfléchissant à l'ensemble des émotions que peuvent ressentir un visiteur.
                         </p>
                         <p>
-                            Même si j'aime particulièrement travailler avec des tecnologies modernes tels que <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby Js</a> qui permet de créer des sites web ultra rapides, modernes et performants. Des critères SEO toujours de plus en plus importants aujourd'hui pour ne pas se faire pénaliser par Google.
+                            Même si j'aime particulièrement travailler avec des technologies modernes tels que <a href="https://www.gatsbyjs.org/" target="_blank" rel="noopener noreferrer">Gatsby Js</a> qui permet de créer des sites web ultra rapides, modernes et performants. Des critères SEO toujours de plus en plus importants aujourd'hui pour ne pas se faire pénaliser par Google.
                         </p>
                         <p>
                             Je conçois également des sites internet professionnels en utilisant le CMS <a href="https://fr.wordpress.org/" target="_blank" rel="noopener noreferrer">Wordpress</a> qui vous permettra de gérer du contenu ou pour vos besoin d'E-commerce grace à l'extension WooCommerce.

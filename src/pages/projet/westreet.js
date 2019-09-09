@@ -9,7 +9,7 @@ import ProjectContent from '../../components/Projects/Single/Westreet/ProjectCon
 
 const Westreet = ({ data }) => (
   <Layout>
-    <SEO title="We Street" />
+    <SEO lang="fr" title="We Street" />
     <BackgroundSection 
         img={ data.westreet.childImageSharp.fluid }
         title="We Street"

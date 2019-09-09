@@ -6,7 +6,6 @@ import ScrollMagic from '../Base/ScrollMagic'
 
 import arrowWhite from '../../images/base/arrow-white.svg'
 
-
 export default class Portfolio extends Component {
     componentDidMount = () => {
         this.animPortfolio()
@@ -19,7 +18,6 @@ export default class Portfolio extends Component {
 
         // Init Timeline
         const portfolioTl = new TimelineLite()
-        const portfolioSecondTl = new TimelineLite()
 
         // Target
         const targetHomePortfolio = this.refs.targetHomePortfolio
@@ -31,16 +29,16 @@ export default class Portfolio extends Component {
         })
         .setTween(
             portfolioTl
-                .from(".bitcoin-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".bitcoin-project > .reveal-portfolio--mask", .65, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.bitcoin h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.bitcoin .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
 
-                .from(".flag-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".flag-project > .reveal-portfolio--mask", .65, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.flag h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.flag .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
+                
         )
         .addTo(controller)
-
 
         new ScrollMagic.Scene({
             triggerElement: targetHomePortfolio,
@@ -49,13 +47,17 @@ export default class Portfolio extends Component {
         })
         .setTween(
             portfolioTl
-                .from(".weStreet-project > .reveal-portfolio--second-mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".weStreet-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.weStreet h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.weStreet .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
 
-                .from(".leheadiste-project > .reveal-portfolio--second-mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from(".leheadiste-project > .reveal-portfolio--mask", .85, { transform: 'translateY(100%)', ease: Power2.easeOut })
                 .from('.leheadiste h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
                 .from('.leheadiste .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
+
+                .from(".clarisse-project > .reveal-portfolio--second-mask", .65, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .from('.clarisse h3', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
+                .from('.clarisse .projects-links', .25, { autoAlpha: 0, transform: 'translateY(100%)', ease: Power1.easeOut })
         )
         .addTo(controller)
     }
@@ -70,9 +72,11 @@ export default class Portfolio extends Component {
                         const flag = data.flag.childImageSharp.fluid
                         const leHeadiste = data.headiste.childImageSharp.fluid
                         const weStreet = data.weStreet.childImageSharp.fluid
+                        const clarisse = data.clarisse.childImageSharp.fluid
 
                         return (
                             <div className="homePortfolio-wrapper">
+
                                 <div className="projects--first">
                                     <figure className="bitcoin">
                                         <Link to="/projet/lafrenchcoin" className="bitcoin-project projects">
@@ -90,20 +94,25 @@ export default class Portfolio extends Component {
                                             <Img fluid={ flag } />
                                             <div className="reveal-portfolio--mask"></div>
                                         </Link>
-                                        <figcaption><h3>Drapeaux Discount</h3></figcaption>
-                                        <Link className="projects-links btn--default" to="/projet/drapeaux-discount">
+                                        <figcaption>
+                                            <h3>Drapeaux Discount</h3>
+                                        </figcaption>
+                                        <Link className="projects-links btn--default" to="/projet/drapeauxdiscount">
                                             Voir le projet
                                             <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
                                     </figure>
                                 </div>
+                                
                                 <div className="projects--second">
                                     <figure className="weStreet">
                                         <Link to="/projet/westreet" className="weStreet-project projects">
-                                            <Img fluid={ weStreet } />
-                                            <div className="reveal-portfolio--second-mask"></div>
+                                                <Img fluid={ weStreet } />
+                                                <div className="reveal-portfolio--second-mask"></div>
                                         </Link>
-                                        <figcaption><h3>We Street</h3></figcaption>
+                                        <figcaption>
+                                            <h3>We Street</h3>
+                                        </figcaption>
                                         <Link className="projects-links btn--default" to="/projet/westreet">
                                             Voir le projet
                                             <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
@@ -114,8 +123,26 @@ export default class Portfolio extends Component {
                                             <Img fluid={ leHeadiste } />
                                             <div className="reveal-portfolio--second-mask"></div>
                                         </Link>
-                                        <figcaption><h3>Le Headiste</h3></figcaption>
-                                        <Link className="projects-links btn--default" to="/projet/le-headiste">
+                                        <figcaption>
+                                            <h3>Le Headiste</h3>
+                                        </figcaption>
+                                        <Link className="projects-links btn--default" to="/projet/leheadiste">
+                                            Voir le projet
+                                            <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
+                                        </Link>
+                                    </figure>
+                                </div>
+
+                                <div className="projects--third">
+                                    <figure className="clarisse">
+                                        <Link to="/projet/clarisse" className="clarisse-project projects">
+                                            <Img fluid={ clarisse } />
+                                            <div className="reveal-portfolio--second-mask"></div>
+                                        </Link>
+                                        <figcaption>
+                                            <h3>Clarisse Traductions</h3>
+                                        </figcaption>
+                                        <Link className="projects-links btn--default" to="/projet/clarisse">
                                             Voir le projet
                                             <img src={ arrowWhite } alt="Flèche bouton voir le projet" />
                                         </Link>
@@ -158,6 +185,14 @@ const Image = graphql`
         }
 
         weStreet:file(relativePath:{eq: "portfolio/we-street.jpg"}) {
+            childImageSharp {
+                fluid(maxHeight: 600) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
+        }
+
+        clarisse:file(relativePath:{eq: "portfolio/clarisse-traductions.jpg"}) {
             childImageSharp {
                 fluid(maxHeight: 600) {
                     ...GatsbyImageSharpFluid_tracedSVG

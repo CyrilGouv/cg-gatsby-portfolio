@@ -7,7 +7,7 @@ import ProjectContent from '../components/Projects/ProjectContent'
 
 const Portfolio = () => (
   <Layout>
-    <SEO title="Portfolio" />
+    <SEO lang="fr" title="Portfolio" />
     <Header />
     <ProjectContent />
   </Layout>

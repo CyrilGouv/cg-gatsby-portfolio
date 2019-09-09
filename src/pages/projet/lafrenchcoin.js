@@ -9,7 +9,7 @@ import ProjectContent from '../../components/Projects/Single/Lafrenchcoin/Projec
 
 const Lafrenchcoin = ({ data }) => (
   <Layout>
-    <SEO title="La French Coin" />
+    <SEO lang="fr" title="La French Coin" />
     <BackgroundSection 
         img={ data.bitcoin.childImageSharp.fluid }
         title="La French Coin"

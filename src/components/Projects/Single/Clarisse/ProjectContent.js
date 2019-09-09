@@ -6,6 +6,8 @@ import ScrollMagic from '../../../Base/ScrollMagic'
 
 import ProjectOrdi from './ProjectOrdi'
 
+import arrowImg from '../../../../images/base/arrow-black.svg'
+
 export default class ProjectContent extends Component {
 
     componentDidMount = () => {
@@ -18,7 +20,6 @@ export default class ProjectContent extends Component {
 
         const project = this.refs.project
         const projectBlurb = this.refs.projectBlurb.children
-        const projectOrdiReveal = this.refs.projectOrdiReveal
 
         new ScrollMagic.Scene({
             triggerElement: project,
@@ -29,24 +30,42 @@ export default class ProjectContent extends Component {
             projectTl
                 .staggerFrom(projectBlurb, .85 , { autoAlpha: 0, transform: 'translateY: 100%', ease: Power2.easeOut, delay: 2 }, .25)
                 .from('.singleProject--mask', 1.25, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=1.5')
-                .from(projectOrdiReveal, .85 , { autoAlpha: 0, transform: 'translateY: 100%', ease: Power2.easeOut}, '-=.25')
         )
-        .addTo(controller)  
+        .addTo(controller)
+
+        const colorTl = new TimelineLite()
+
+        const color = this.refs.color
+
+        new ScrollMagic.Scene({
+            triggerElement: color,
+            triggerHook: .85,
+            reverse: false
+        })
+        .setTween(
+            colorTl
+                .from('.singleProject-color--mask', 1.25, { transform: 'translateY(100%)', ease: Power2.easeOut })
+        )
+        .addTo(controller)
+        
     }
 
     render() {
         return (
-            <section className="singleProjectContent singleLeheadiste" ref="project">
+            <section className="singleProjectContent singleClarisseTraductions" ref="project">
                 <div className="singleProject-blurb">
                     <div className="singleProject-blurb-intro" ref="projectBlurb">
                         <p>
-                            Le Headiste est une boutique en ligne spécialisée dans la vente de chapeaux tendances et originals.
-                            Ce projet de web design a été réalisé avec le logiciel <a className="inline-link" href="https://www.sketch.com/" target="_blank" rel="noopener noreferrer">Sketch App.</a>
+                            Projet de création d'un site internet multilingue sous Wordpress. Clarisse Traductions propose des services de traduction, localisation, SEO, sous-titrage, relecture, révision, édition et rédaction vous assurant une communication parfaite afin de vous implanter durablement sur le marché français.
                         </p>
                         <p className="singleProject-blurb-year">ANNÉE:</p>
                         <p>2019</p>
                         <p className="singleProject-blurb-client">CLIENT:</p>
-                        <p>Le Headiste</p>
+                        <p>Clarisse Traductions</p>
+                        <a href="https://www.clarisse-traductions.com" target="_blank" rel="noopener noreferrer" className="btn--default">
+                            Voir le site
+                            <img src={ arrowImg } alt="Flèche appel à l'action vers à propos"/>    
+                        </a>
                     </div>
                     <div className="singleProject-img">
                         <StaticQuery
@@ -54,16 +73,13 @@ export default class ProjectContent extends Component {
                             render={ data => {
                                 return (
                                     <figure>
-                                        <Img fluid={ data.mobile.childImageSharp.fluid } />
+                                        <Img fluid={ data.ordiClarisse.childImageSharp.fluid } />
                                         <div className="singleProject--mask"></div>
                                     </figure>
                                 )
                             } }
                         />
                     </div>
-                </div>
-                <div ref="projectOrdiReveal">
-                    <ProjectOrdi />
                 </div>
             </section>
         )
@@ -73,7 +89,7 @@ export default class ProjectContent extends Component {
 
 const Image = graphql`
     {
-        mobile:file(relativePath:{eq: "portfolio/mockup-mobile-leheadiste.png"}) {
+        ordiClarisse:file(relativePath:{eq: "portfolio/mockup-ordi-clarisse-traductions.png"}) {
             childImageSharp {
                 fluid(maxHeight: 600) {
                     ...GatsbyImageSharpFluid_tracedSVG

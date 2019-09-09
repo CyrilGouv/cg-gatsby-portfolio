@@ -10,18 +10,9 @@ import arrowBlack from '../../images/base/arrow-black.svg'
 
 
 export default class ContactContent extends Component {
-    state = {
-        name: '',
-        email: '',
-        message: ''
-    }
 
     componentDidMount = () => {
         this.animWhat()
-    }
-
-    componentDidUpdate = () => {
-        this.hasValue()
     }
 
     animWhat = () => {
@@ -38,6 +29,7 @@ export default class ContactContent extends Component {
         .setTween(
             contactTl
                 .from('.reveal-contact--mask', 1.25, { transform: 'translateY(100%)', ease: Power2.easeOut })
+                .to('.contactContent-maps figure',0.25, { css:{className:"+=addShadow"} })
         )
         .addTo(controller)
 
@@ -46,7 +38,6 @@ export default class ContactContent extends Component {
         const address = this.refs.address.children
         const dispo = this.refs.dispo.children
         const email = this.refs.email.children
-        const form = this.refs.form.children
         
         new ScrollMagic.Scene({
             triggerElement: infos,
@@ -58,34 +49,10 @@ export default class ContactContent extends Component {
                 .staggerFrom(address, .5, { autoAlpha: 0, y: 30, ease: Power1.easeOut }, .25)
                 .staggerFrom(dispo, .5, { autoAlpha: 0, y: 30, ease: Power1.easeOut }, .25, '-=0.25')
                 .staggerFrom(email, .5, { autoAlpha: 0, y: 30, ease: Power1.easeOut }, .25, '-=0.25')
-                .staggerFrom(form, .5, { autoAlpha: 0, y: 30, ease: Power1.easeOut }, .25)
         )
         .addTo(controller)
     }
 
-    hasValue = () => {
-        const name = this.state.name
-        const email = this.state.email
-        const message = this.state.message
-
-        if (name === '') {
-            TweenLite.to(this.refs.name, 0.1, { css:{ className: '-=hasValue' } })
-        } else {
-            TweenLite.to(this.refs.name, 0.1, { css:{ className: '+=hasValue' } })
-        }
-
-        if (email === '') {
-            TweenLite.to(this.refs.emailForm, 0.1, { css:{ className: '-=hasValue' } })
-        } else {
-            TweenLite.to(this.refs.emailForm, 0.1, { css:{ className: '+=hasValue' } })
-        }
-
-        if (message === '') {
-            TweenLite.to(this.refs.message, 0.1, { css:{ className: '-=hasValue' } })
-        } else {
-            TweenLite.to(this.refs.message, 0.1, { css:{ className: '+=hasValue' } })
-        }
-    }
 
     render() {
         return (
@@ -130,27 +97,6 @@ export default class ContactContent extends Component {
                         <h4>Email</h4>
                         <p>contact@cyrilgouverneur.com</p>
                     </div>
-                </div>
-
-                <div className="contactContent-form">
-                    <form  method="POST" action="https://formspree.io/contact@cyrilgouverneur.com" ref="form">
-                        <div className="form-group">
-                            <input ref="name" type="text" name="name" id="name" className="name" onChange={ (e) => this.setState({ name: e.target.value }) } />
-                            <label htmlFor="name">Votre nom</label>
-                        </div>
-                        <div className="form-group">
-                            <input ref="emailForm" type="email" name="email" id="name" className="email" onChange={ (e) => this.setState({ email: e.target.value }) }  />
-                            <label htmlFor="name">Votre email</label>
-                        </div>
-                        <div className="form-group">
-                            <textarea ref="message" name="message" id="message" className="message" onChange={ (e) => this.setState({ message: e.target.value }) } ></textarea>
-                            <label htmlFor="message">Votre message</label>
-                        </div>
-                        <button type="submit" className="btn--default">
-                            Envoyer
-                            <img src={ arrowBlack } alt="Flèche bouton voir le projet" />
-                        </button>
-                    </form>
                 </div>
             </section>
         )

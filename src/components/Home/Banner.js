@@ -30,7 +30,7 @@ export default class Banner extends Component {
         var rule = CSSRulePlugin.getRule(".btn::before")
 
         tl
-            .from(contentTitleBar, 1, { transform: "scaleY(0)", delay: 3 })
+            .from(contentTitleBar, 1, { transform: "scaleY(0)", delay: 5.4 })
             .from(h2TitleFirst, .85, { transform: "translateY(110%)", ease: Power1.easeOut })
             .from(h2TitleSecond, .85, { transform: "translateY(110%)", ease: Power1.easeOut }, '-=0.70')
             .from(h1Title, 1, { autoAlpha: 0, y: 30, ease: Power1.easeOut })

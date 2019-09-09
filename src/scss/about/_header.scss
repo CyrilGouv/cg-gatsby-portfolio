@@ -116,10 +116,16 @@
         flex-direction: column;
         justify-content: center;
 
-        color: $black;
+        
+
+        p {
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
 
         h1 {
             font-size: 3.125rem;
+            color: $black;
             overflow: hidden;
 
             span {
@@ -137,6 +143,10 @@
             h1 {
                 font-size: 3rem !important;
             }
+
+            p {
+                font-size: 0.95rem;
+            }
         }
     }
 }
@@ -148,6 +158,10 @@
             h1 {
                 font-size: 2.35rem !important;
             }
+
+            p {
+                font-size: 0.9rem;
+            }
         }
     }
 }
@@ -158,10 +172,10 @@
         .content {
             h1 {
                 font-size: 1.875rem !important;
+            }
 
-                &:first-of-type {
-                    margin-top: 3rem;
-                }
+            p {
+                font-size: 0.85rem;
             }
         }
     }
@@ -173,10 +187,10 @@
         .content {
             h1 {
                 font-size: 1.35rem !important;
+            }
 
-                &:first-of-type {
-                    margin-top: 3rem;
-                }
+            p {
+                font-size: 0.8rem;
             }
         }
 
@@ -211,10 +225,10 @@
                 line-height: 1.5rem;
                 letter-spacing: 1px !important;
                 text-align: justify;
+            }
 
-                &:first-of-type {
-                    margin-top: 2rem;
-                }
+            p {
+                font-size: 0.75rem;
             }
         }
 

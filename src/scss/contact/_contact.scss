@@ -1,14 +1,19 @@
 .contactContent {
+    background: linear-gradient($white 25vh, $lightGray 25vh, $lightGray 100%);
+    padding: 0 0 2rem 0;
 
     .contactContent-maps {
         width: 70%;
-        text-align: right;
-        margin-left: auto;
-
+        margin: 0 auto;
+        
         figure {
             position: relative;
             overflow: hidden;
             margin: 0;
+            
+            &.addShadow {
+                box-shadow: 0 10px 20px rgba(0,0,0,.15);
+            }
 
             .reveal-contact--mask {
                 position: absolute;
@@ -39,7 +44,7 @@
     }
 
     .contactContent-infos {
-        width: 85%;
+        width: 70%;
         margin: 10rem auto 10rem auto;
         display: flex;
         justify-content: space-between;
@@ -65,76 +70,20 @@
             color: $lightBlack;
         }
     }
+}
 
-    .contactContent-form {
-        width: 75%;
-        margin: 0 auto 0 auto;
-        padding: 0 0 20rem 0;
-        display: flex;
+@media only screen and (max-width : 1200px) {
+    .contactContent {
+        .contactContent-infos {
+            flex-direction: column;
 
-        form {
-            width: 80%;
-            margin: 0 auto;
-
-            .btn--default {
-                border: none;
-                outline: none;
-                background: none;
-            }
-        }
-
-        .name, .email, .message {
-            display: block;
-            width: 100%;
-
-            padding: 15px 0px;
-            margin-bottom: 3rem;
-
-            background: none;
-            border: none;
-            border-bottom: 2px solid $gray;
-
-            font-size: 1rem;
-            font-weight: 400;
-            color: $black;
-            
-
-            &:focus, &:active {
-                outline: none;
-            }
-
-            &:focus + label,
-            &.hasValue + label {
-                top: -10px;
-                font-size: .75rem;
-                color: $gray;
-            }
-        }
-
-        .message {
-            resize: none;
-        }
-
-        .form-group {
-            position: relative;
-            display: block;
-
-            label {
-                position: absolute;
-                top: 50%;
-                left: 0;
-    
-                color: $black;
-                font-weight: 500;
-    
-                pointer-events: none;
-    
-                transform: translateY(-50%);
-                transition: .3s;
+            .infos-disponibility {
+                margin: 3rem 0;
             }
         }
     }
 }
+
 
 
 /* Medium Devices, Desktops */
@@ -177,7 +126,6 @@
 @media only screen and (max-width : 768px) {
     .contactContent {
         .contactContent-maps {
-            width: 100% !important;
             height: 450px !important;
 
             .gatsby-image-wrapper {

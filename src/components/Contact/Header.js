@@ -19,12 +19,10 @@ export default class Header extends Component {
 
         const titleFirst = this.refs.titleFirst
         const titleSec = this.refs.titleSec
-        const titleThird = this.refs.titleThird
 
         titleTl
             .from(titleFirst, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut })
             .from(titleSec, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
-            .from(titleThird, 0.85, { transform: 'translateY(100%)', ease: Power2.easeOut }, '-=0.70')
     }
 
     setMenu = () => {
@@ -47,19 +45,17 @@ export default class Header extends Component {
                     <Logo />
                 </div>
                 <div className="content">
+                    <p>
+                        Contact
+                    </p>
                     <h1>
                         <span ref="titleFirst">
-                           Aimez-vous ce que vous voyez ?
+                            Vous avez un projet web
                         </span>
                     </h1>
                     <h1>
                         <span ref="titleSec">
-                            Vous avez un projet web dont
-                        </span>
-                    </h1>
-                    <h1>
-                        <span ref="titleThird">
-                            vous souhaitez me parler ?
+                            dont vous souhaitez me parler ?
                         </span>
                     </h1>
                 </div>

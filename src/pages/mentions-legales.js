@@ -8,7 +8,7 @@ import Mentions from '../components/Mentions/MentionsContent'
 
 const MentionsLegales = () => (
   <Layout>
-    <SEO title="Mentions légales" keywords={[`gatsby`, `application`, `react`, `cyril gouverneur`, `développeur front-end`, `web design`, `intégrateur web`, `création site internet`, `création site vitrine`, `création site web`, `biscarrosse`, `landes`, `nouvelle-aquitaine`]} />
+    <SEO lang="fr" title="Mentions légales" keywords={[`gatsby`, `application`, `react`, `cyril gouverneur`, `développeur front-end`, `web design`, `intégrateur web`, `création site internet`, `création site vitrine`, `création site web`, `biscarrosse`, `landes`, `nouvelle-aquitaine`]} />
     <Header />
     <Mentions />
   </Layout>
